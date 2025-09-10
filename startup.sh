@@ -1,16 +1,12 @@
 #!/bin/bash
 
-# Install dependencies if node_modules doesn't exist
-if [ ! -d "node_modules" ]; then
-    echo "Installing dependencies..."
-    npm install
-fi
+# Install dependencies
+echo "Installing dependencies..."
+npm ci
 
-# Build if .next doesn't exist
-if [ ! -d ".next" ]; then
-    echo "Building application..."
-    npm run build
-fi
+# Build the application
+echo "Building application..."
+npm run build
 
 # Start the application
 echo "Starting application..."
