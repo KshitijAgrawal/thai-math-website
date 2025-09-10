@@ -1,48 +1,57 @@
 'use client';
 
 import React, { useState } from 'react';
-import { BookOpen, Play, Users, Trophy, ChevronRight, Menu, X, Calculator, PenTool, BarChart3 } from 'lucide-react';
+import { Play, ChevronRight, Menu, X, Calculator, PenTool, BarChart3 } from 'lucide-react';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [selectedGrade, setSelectedGrade] = useState('ป.1-ป.6');
+  const [selectedGrade, setSelectedGrade] = useState('primary');
 
   const gradeOptions = [
-    { key: 'ป.1-ป.6', label: 'ประถมศึกษา (ป.1-ป.6)', color: 'bg-blue-500' },
-    { key: 'ม.1-ม.3', label: 'มัธยมต้น (ม.1-ม.3)', color: 'bg-green-500' },
-    { key: 'ม.4-ม.6', label: 'มัธยมปลาย (ม.4-ม.6)', color: 'bg-purple-500' },
+    { key: 'primary', label: 'ประถมศึกษา (ป.1-ป.6)', color: 'bg-blue-500' },
+    { key: 'lower-secondary', label: 'มัธยมต้น (ม.1-ม.3)', color: 'bg-green-500' },
+    { key: 'upper-secondary', label: 'มัธยมปลาย (ม.4-ม.6)', color: 'bg-purple-500' },
     { key: 'university', label: 'มหาวิทยาลัย', color: 'bg-orange-500' }
   ];
 
-  const subjects = {
-    'ป.1-ป.6': [
-      { name: 'การนับและตัวเลข', lessons: 24, icon: '🔢' },
-      { name: 'การบวกลบ', lessons: 32, icon: '➕' },
-      { name: 'การคูณหาร', lessons: 28, icon: '✖️' },
-      { name: 'เศษส่วน', lessons: 20, icon: '🍰' },
-      { name: 'เรขาคณิตพื้นฐาน', lessons: 16, icon: '📐' },
-      { name: 'การวัด', lessons: 18, icon: '📏' }
-    ],
-    'ม.1-ม.3': [
-      { name: 'พีชคณิต', lessons: 45, icon: '📊' },
-      { name: 'เรขาคณิต', lessons: 38, icon: '△' },
-      { name: 'สถิติ', lessons: 22, icon: '📈' },
-      { name: 'ความน่าจะเป็น', lessons: 18, icon: '🎲' },
-      { name: 'จำนวนจริง', lessons: 25, icon: '∞' }
-    ],
-    'ม.4-ม.6': [
-      { name: 'แคลคูลัส', lessons: 60, icon: '∫' },
-      { name: 'ตรีโกณมิติ', lessons: 35, icon: '📐' },
-      { name: 'เวกเตอร์', lessons: 28, icon: '→' },
-      { name: 'เมทริกซ์', lessons: 32, icon: '⬜' },
-      { name: 'สถิติขั้นสูง', lessons: 40, icon: '📊' }
-    ],
-    'university': [
-      { name: 'Linear Algebra', lessons: 55, icon: '🔢' },
-      { name: 'Differential Equations', lessons: 48, icon: '𝑓′' },
-      { name: 'Complex Analysis', lessons: 42, icon: 'ℂ' },
-      { name: 'Real Analysis', lessons: 50, icon: 'ℝ' }
-    ]
+  const getSubjects = (grade: string) => {
+    if (grade === 'primary') {
+      return [
+        { name: 'การนับและตัวเลข', lessons: 24, icon: '🔢' },
+        { name: 'การบวกลบ', lessons: 32, icon: '➕' },
+        { name: 'การคูณหาร', lessons: 28, icon: '✖️' },
+        { name: 'เศษส่วน', lessons: 20, icon: '🍰' },
+        { name: 'เรขาคณิตพื้นฐาน', lessons: 16, icon: '📐' },
+        { name: 'การวัด', lessons: 18, icon: '📏' }
+      ];
+    }
+    if (grade === 'lower-secondary') {
+      return [
+        { name: 'พีชคณิต', lessons: 45, icon: '📊' },
+        { name: 'เรขาคณิต', lessons: 38, icon: '△' },
+        { name: 'สถิติ', lessons: 22, icon: '📈' },
+        { name: 'ความน่าจะเป็น', lessons: 18, icon: '🎲' },
+        { name: 'จำนวนจริง', lessons: 25, icon: '∞' }
+      ];
+    }
+    if (grade === 'upper-secondary') {
+      return [
+        { name: 'แคลคูลัส', lessons: 60, icon: '∫' },
+        { name: 'ตรีโกณมิติ', lessons: 35, icon: '📐' },
+        { name: 'เวกเตอร์', lessons: 28, icon: '→' },
+        { name: 'เมทริกซ์', lessons: 32, icon: '⬜' },
+        { name: 'สถิติขั้นสูง', lessons: 40, icon: '📊' }
+      ];
+    }
+    if (grade === 'university') {
+      return [
+        { name: 'Linear Algebra', lessons: 55, icon: '🔢' },
+        { name: 'Differential Equations', lessons: 48, icon: '𝑓′' },
+        { name: 'Complex Analysis', lessons: 42, icon: 'ℂ' },
+        { name: 'Real Analysis', lessons: 50, icon: 'ℝ' }
+      ];
+    }
+    return [];
   };
 
   const features = [
@@ -221,7 +230,7 @@ export default function Home() {
 
           {/* Subject Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {subjects[selectedGrade]?.map((subject, index) => (
+            {getSubjects(selectedGrade).map((subject, index) => (
               <div key={index} className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 cursor-pointer">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-3xl">{subject.icon}</span>
