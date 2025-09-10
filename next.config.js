@@ -1,14 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'standalone',
+    output: 'export',
     trailingSlash: true,
     images: {
       unoptimized: true
     },
-    // Azure App Service compatibility
-    experimental: {
-      outputFileTracingRoot: undefined,
-    }
+    distDir: 'build'
   }
   
   module.exports = nextConfig
