@@ -2,10 +2,13 @@
 
 import React, { useState } from 'react';
 import { Play, ChevronRight, Menu, X, Calculator, PenTool, BarChart3 } from 'lucide-react';
+import CoursePage from '../components/CoursePage';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedGrade, setSelectedGrade] = useState('primary');
+  const [currentView, setCurrentView] = useState('home');
+  const [selectedCourse, setSelectedCourse] = useState<any>(null);
 
   const gradeOptions = [
     { key: 'primary', label: 'ประถมศึกษา (ป.1-ป.6)', color: 'bg-blue-500' },
@@ -54,6 +57,21 @@ export default function Home() {
     return [];
   };
 
+  const handleCourseClick = (subject: any) => {
+    const gradeLabel = gradeOptions.find(g => g.key === selectedGrade)?.label || '';
+    setSelectedCourse({
+      courseKey: selectedGrade,
+      courseName: subject.name,
+      gradeLevel: gradeLabel
+    });
+    setCurrentView('course');
+  };
+  
+  const handleBackToHome = () => {
+    setCurrentView('home');
+    setSelectedCourse(null);
+  };
+
   const features = [
     {
       icon: <Play className="w-8 h-8 text-blue-500" />,
@@ -83,6 +101,17 @@ export default function Home() {
     { number: '50+', label: 'หัวข้อ' },
     { number: '95%', label: 'ความพึงพอใจ' }
   ];
+
+  if (currentView === 'course' && selectedCourse) {
+    return (
+      <CoursePage 
+        courseKey={selectedCourse.courseKey}
+        courseName={selectedCourse.courseName}
+        gradeLevel={selectedCourse.gradeLevel}
+        onBack={handleBackToHome}
+      />
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
@@ -231,7 +260,7 @@ export default function Home() {
           {/* Subject Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {getSubjects(selectedGrade).map((subject, index) => (
-              <div key={index} className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 cursor-pointer">
+              <div key={index} onClick={() => handleCourseClick(subject)} className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 cursor-pointer">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-3xl">{subject.icon}</span>
                   <span className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
