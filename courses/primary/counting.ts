@@ -1,6 +1,6 @@
 import { CourseData } from '../index';
 
-export const countingCourse: CourseData = {
+const countingCourse: CourseData = {
   title: 'การนับและตัวเลข',
   description: 'เรียนรู้การนับตัวเลขตั้งแต่ 1-100 และทำความเข้าใจเกี่ยวกับระบบตัวเลข การเรียงลำดับ และการเปรียบเทียบตัวเลข',
   duration: '2-3 ชั่วโมง',
@@ -171,3 +171,6 @@ export const countingCourse: CourseData = {
     }
   ]
 };
+
+const counting = (): CourseData => countingCourse;
+export default counting;

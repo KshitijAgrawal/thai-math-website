@@ -18,6 +18,7 @@ const CoursePage: React.FC<CoursePageProps> = ({ courseKey, courseName, gradeLev
   const [showExplanation, setShowExplanation] = useState(false);
   const [userAnswers, setUserAnswers] = useState<number[]>([]);
   const [viewMode, setViewMode] = useState<'curriculum' | 'lesson'>('curriculum');
+  const [completedLessons, setCompletedLessons] = useState<Set<number>>(new Set());
 
   // Get course data from the modular course files
   const courseData = getCourseData(courseName, courseKey);
@@ -81,7 +82,7 @@ const CoursePage: React.FC<CoursePageProps> = ({ courseKey, courseName, gradeLev
               </div>
               <div className="flex items-center space-x-2">
                 <div className="text-sm text-gray-600">
-                  {courseData.lessons.filter(l => l.completed).length}/{courseData.lessons.length} บทเรียนเสร็จสิ้น
+                    {completedLessons.size}/{courseData.lessons.length} บทเรียนเสร็จสิ้น
                 </div>
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-sm">M</span>
@@ -172,7 +173,7 @@ const CoursePage: React.FC<CoursePageProps> = ({ courseKey, courseName, gradeLev
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-4">
                         <div className="flex-shrink-0">
-                          {lesson.completed ? '✅' : '⭕'}
+                            {completedLessons.has(index) ? '✅' : '⭕'}
                         </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 group-hover:text-blue-600">
@@ -329,7 +330,17 @@ const CoursePage: React.FC<CoursePageProps> = ({ courseKey, courseName, gradeLev
                     </button>
                   ) : (
                     <button
-                      onClick={() => setViewMode('curriculum')}
+                    onClick={() => {
+                        // Mark lesson as completed
+                        setCompletedLessons(prev => {
+                          const newSet = new Set(prev);
+                          newSet.add(currentLesson);
+                          return newSet;
+                        });
+                        
+                        // Just switch view - let the lesson selection handler reset states
+                        setViewMode('curriculum');
+                      }}
                       className="flex items-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700"
                     >
                       เสร็จสิ้นบทเรียน ✅

@@ -1,6 +1,6 @@
 import { CourseData } from '../index';
 
-export const fractionsCourse: CourseData = {
+const fractionsCourse: CourseData = {
   title: 'เศษส่วน',
   description: 'เรียนรู้แนวคิดเศษส่วน การเปรียบเทียบ การบวกลบเศษส่วน และการประยุกต์ใช้ในชีวิตประจำวัน',
   duration: '3-4 ชั่วโมง',
@@ -235,3 +235,6 @@ export const fractionsCourse: CourseData = {
     }
   ]
 };
+
+const fractions = (): CourseData => fractionsCourse;
+export default fractions;

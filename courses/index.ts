@@ -35,7 +35,7 @@ export interface CourseData {
 
 // Course mapping by grade and subject
 const courseMap: { [key: string]: { [key: string]: () => CourseData } } = {
-  primary: {
+  'primary': {
     'การนับและตัวเลข': primaryCourses.counting,
     'การบวกลบ': primaryCourses.addition,
     'การคูณหาร': primaryCourses.multiplication,
@@ -57,7 +57,7 @@ const courseMap: { [key: string]: { [key: string]: () => CourseData } } = {
     'เมทริกซ์': advancedCourses.matrices,
     'สถิติขั้นสูง': advancedCourses.advancedStatistics
   },
-  university: {
+  'university': {
     'Linear Algebra': universityCourses.linearAlgebra,
     'Differential Equations': universityCourses.differentialEquations,
     'Complex Analysis': universityCourses.complexAnalysis,

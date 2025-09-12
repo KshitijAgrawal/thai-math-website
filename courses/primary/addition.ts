@@ -1,6 +1,6 @@
 import { CourseData } from '../index';
 
-export const additionCourse: CourseData = {
+const additionCourse: CourseData = {
   title: 'การบวกลบ',
   description: 'เรียนรู้การบวกและลบตัวเลขตั้งแต่พื้นฐานจนถึงการบวกลบที่มีการทดเลขและการยืม รวมถึงการแก้โจทย์ปัญหา',
   duration: '3-4 ชั่วโมง',
@@ -172,3 +172,6 @@ export const additionCourse: CourseData = {
     }
   ]
 };
+
+const addition = (): CourseData => additionCourse;
+export default addition;

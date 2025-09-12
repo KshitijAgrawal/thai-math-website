@@ -1,6 +1,6 @@
 import { CourseData } from '../index';
 
-export const multiplicationCourse: CourseData = {
+const multiplicationCourse: CourseData = {
   title: 'การคูณหาร',
   description: 'เรียนรู้สูตรคูณและการหาร เข้าใจความสัมพันธ์ระหว่างการคูณและการหาร และนำไปใช้ในการแก้โจทย์ปัญหา',
   duration: '4-5 ชั่วโมง',
@@ -249,3 +249,6 @@ export const multiplicationCourse: CourseData = {
     }
   ]
 };
+
+const multiplication = (): CourseData => multiplicationCourse;
+export default multiplication;
