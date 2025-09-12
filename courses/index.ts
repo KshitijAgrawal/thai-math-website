@@ -2,7 +2,7 @@
 import * as primaryCourses from './primary';
 import * as secondaryCourses from './secondary';
 import * as advancedCourses from './advanced';
-//import * as universityCourses from './university';
+import * as universityCourses from './university';
 
 export interface Question {
   id: number;
@@ -55,16 +55,14 @@ const courseMap: { [key: string]: { [key: string]: () => CourseData } } = {
     'ตรีโกณมิติ': advancedCourses.trigonometry,
     'เวกเตอร์': advancedCourses.vectors,
     'เมทริกซ์': advancedCourses.matrices,
-    //'สถิติขั้นสูง': advancedCourses.advancedStatistics
+    'สถิติขั้นสูง': advancedCourses.advancedStatistics
   },
-  /*
   university: {
     'Linear Algebra': universityCourses.linearAlgebra,
     'Differential Equations': universityCourses.differentialEquations,
     'Complex Analysis': universityCourses.complexAnalysis,
     'Real Analysis': universityCourses.realAnalysis
   }
-  */
 };
 
 // Main function to get course data
