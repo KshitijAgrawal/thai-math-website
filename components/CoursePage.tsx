@@ -61,7 +61,7 @@ const CoursePage: React.FC<CoursePageProps> = ({ courseKey, courseName, gradeLev
 
   if (viewMode === 'curriculum') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <div key="curriculum-view" className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
         {/* Header */}
         <header className="bg-white/90 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -196,7 +196,7 @@ const CoursePage: React.FC<CoursePageProps> = ({ courseKey, courseName, gradeLev
 
   // Lesson View (Interactive Questions)
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div key={`lesson-view-${currentLesson}`} className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -260,7 +260,7 @@ const CoursePage: React.FC<CoursePageProps> = ({ courseKey, courseName, gradeLev
                 <div className="space-y-4 mb-8">
                   {currentQuestionData.options.map((option: string, index: number) => (
                     <button
-                      key={index}
+                      key={`opt-${currentLesson}-${currentQuestion}-${index}`}
                       onClick={() => handleAnswerSelect(index)}
                       disabled={showExplanation}
                       className={`w-full p-4 text-left rounded-lg border-2 transition-all ${
@@ -373,7 +373,7 @@ const CoursePage: React.FC<CoursePageProps> = ({ courseKey, courseName, gradeLev
                 <h4 className="font-semibold text-gray-900 mb-3">รายการคำถาม</h4>
                 {currentLessonData.questions.map((_: any, index: number) => (
                   <button
-                    key={index}
+                    key={`qbtn-${currentLesson}-${index}`}
                     onClick={() => {
                       setCurrentQuestion(index);
                       setSelectedAnswer(userAnswers[index] || null);
