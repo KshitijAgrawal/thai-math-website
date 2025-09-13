@@ -338,9 +338,12 @@ if (currentView === 'course' && selectedCourse) {
           <p className="text-xl mb-8 opacity-90">
             สมัครสมาชิกวันนี้ และเริ่มเรียนฟรี 7 วัน
           </p>
-          <button className="bg-white text-blue-600 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
+          <a 
+            href="#courses"
+            className="inline-block bg-white text-blue-600 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105"
+          >
             เริ่มเรียนฟรี 7 วัน
-          </button>
+          </a>
         </div>
       </section>
 
