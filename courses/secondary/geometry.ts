@@ -24,7 +24,7 @@ const geometry = (): CourseData => ({
       title: 'จุด เส้นตรง และระนาบ',
       duration: '45 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/4r8p8dQ9cJc',
+      videoUrl: 'https://www.youtube.com/embed/Ki5Z7dLvcJQ',
       completed: false,
       objectives: [
         'เข้าใจแนวคิดของจุด เส้นตรง และระนาบ',
@@ -66,7 +66,7 @@ const geometry = (): CourseData => ({
       title: 'มุมและการวัดมุม',
       duration: '50 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/1o3HcKp9rkc',
+      videoUrl: 'https://www.youtube.com/embed/uvgd_TfmIkU',
       completed: false,
       objectives: [
         'เข้าใจและจำแนกประเภทของมุม',
@@ -108,7 +108,7 @@ const geometry = (): CourseData => ({
       title: 'รูปสามเหลี่ยม',
       duration: '55 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/0sA8b0o0ZyE',
+      videoUrl: 'https://www.youtube.com/embed/k5FRoA_N7nI',
       completed: false,
       objectives: [
         'จำแนกประเภทของสามเหลี่ยม',
@@ -150,7 +150,7 @@ const geometry = (): CourseData => ({
       title: 'รูปสี่เหลี่ยม',
       duration: '50 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/1aGkQ3q87iQ',
+      videoUrl: 'https://www.youtube.com/embed/3-fKfK3gf7o',
       completed: false,
       objectives: [
         'จำแนกประเภทของสี่เหลี่ยม',
@@ -192,7 +192,7 @@ const geometry = (): CourseData => ({
       title: 'รูปวงกลม',
       duration: '45 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/Yc7TnPoBqDg',
+      videoUrl: 'https://www.youtube.com/embed/ub-FETGgchs',
       completed: false,
       objectives: [
         'เข้าใจส่วนประกอบของวงกลม',
@@ -234,7 +234,7 @@ const geometry = (): CourseData => ({
       title: 'ทฤษฎีบทพีทาโกรัส',
       duration: '60 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/4r8p8dQ9cJc',
+      videoUrl: 'https://www.youtube.com/embed/-PO_2BtO0Xg',
       completed: false,
       objectives: [
         'เข้าใจทฤษฎีบทพีทาโกรัส',

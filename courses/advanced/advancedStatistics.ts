@@ -24,7 +24,7 @@ const advancedStatistics = (): CourseData => ({
       title: 'การแจกแจงการสุ่มตัวอย่าง',
       duration: '60 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/0I4fQyW2G9A',
+      videoUrl: 'https://www.youtube.com/embed/CPf69bMkFys',
       completed: false,
       objectives: [
         'เข้าใจทฤษฎีบทขีดจำกัดกลาง',
@@ -66,7 +66,7 @@ const advancedStatistics = (): CourseData => ({
       title: 'การประมาณค่าและช่วงความเชื่อมั่น',
       duration: '70 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/u0d0HBbSyYQ',
+      videoUrl: 'https://www.youtube.com/embed/IgtEzimYEwE',
       completed: false,
       objectives: [
         'สร้างช่วงความเชื่อมั่นสำหรับค่าเฉลี่ย',
@@ -123,7 +123,7 @@ const advancedStatistics = (): CourseData => ({
       title: 'การทดสอบสมมติฐานพื้นฐาน',
       duration: '80 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/6h2f5e7F3E0',
+      videoUrl: 'https://www.youtube.com/embed/lBdi-MdHH4Q',
       completed: false,
       objectives: [
         'ตั้งสมมติฐานหลักและสมมติฐานรอง',
@@ -180,7 +180,7 @@ const advancedStatistics = (): CourseData => ({
       title: 'การทดสอบค่าเฉลี่ย',
       duration: '65 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/rqv2W8WwFqo',
+      videoUrl: 'https://www.youtube.com/embed/Avr8A6KY5FI',
       completed: false,
       objectives: [
         'ทดสอบค่าเฉลี่ยประชากรเดียว',
@@ -237,7 +237,7 @@ const advancedStatistics = (): CourseData => ({
       title: 'การวิเคราะห์ไค-สแควร์',
       duration: '60 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/0I4fQyW2G9A',
+      videoUrl: 'https://www.youtube.com/embed/qnyQneEYo7c',
       completed: false,
       objectives: [
         'ทดสอบความเหมาะสมของการแจกแจง',
@@ -294,7 +294,7 @@ const advancedStatistics = (): CourseData => ({
       title: 'การวิเคราะห์ความถดถอยเชิงเส้น',
       duration: '85 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/0I4fQyW2G9A',
+      videoUrl: 'https://www.youtube.com/embed/WMN3db1B-5Y',
       completed: false,
       objectives: [
         'หาสมการเส้นถดถอย',

@@ -20,7 +20,7 @@ const basicGeometryCourse: CourseData = {
       duration: '20 นาที',
       completed: false,
       hasVideo: true, 
-      videoUrl: 'https://www.youtube.com/embed/851Xn070sao',
+      videoUrl: 'https://www.youtube.com/embed/gLw7-iPxQHE',
       questions: [
         {
           id: 1,
@@ -67,7 +67,7 @@ const basicGeometryCourse: CourseData = {
       title: 'รูปสามเหลี่ยม',
       duration: '30 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/rYwKXkzW7a0',
+      videoUrl: 'https://www.youtube.com/embed/pvcgxUZQpys',
       completed: false,
       questions: [
         {
@@ -98,7 +98,7 @@ const basicGeometryCourse: CourseData = {
       title: 'รูปสี่เหลี่ยม',
       duration: '30 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/3YqJ2w3Yp2A',
+      videoUrl: 'https://www.youtube.com/embed/-SOi7QTkA-c',
       completed: false,
       questions: [
         {
@@ -129,7 +129,7 @@ const basicGeometryCourse: CourseData = {
       title: 'วงกลม',
       duration: '25 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/5j2QG79AqXk',
+      videoUrl: 'https://www.youtube.com/embed/sKXN2qjSezo',
       completed: false,
       questions: [
         {
@@ -153,7 +153,7 @@ const basicGeometryCourse: CourseData = {
       title: 'รูปทรงสามมิติพื้นฐาน',
       duration: '35 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/2r2v9V2n8tA',
+      videoUrl: 'https://www.youtube.com/embed/3-fKfK3gf7o',
       completed: false,
       questions: [
         {
@@ -184,7 +184,7 @@ const basicGeometryCourse: CourseData = {
       title: 'การเปรียบเทียบรูปร่าง',
       duration: '20 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/4V9k1iA8wMs',
+      videoUrl: 'https://www.youtube.com/embed/ND73rJsBs8w',
       completed: false,
       questions: [
         {
@@ -208,7 +208,7 @@ const basicGeometryCourse: CourseData = {
       title: 'การจำแนกรูปแบบ',
       duration: '25 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/851Xn070sao',
+      videoUrl: 'https://www.youtube.com/embed/ZAJXEV7cX1g',
       completed: false,
       questions: [
         {
@@ -232,7 +232,7 @@ const basicGeometryCourse: CourseData = {
       title: 'รูปทรงในชีวิตประจำวัน',
       duration: '30 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/851Xn070sao',
+      videoUrl: 'https://www.youtube.com/embed/GD6aiL5awTw',
       completed: false,
       questions: [
         {
@@ -263,7 +263,7 @@ const basicGeometryCourse: CourseData = {
       title: 'การสร้างรูปเรขาคณิต',
       duration: '25 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/851Xn070sao',
+      videoUrl: 'https://www.youtube.com/embed/M7eDcD5SVrs',
       completed: false,
       questions: [
         {

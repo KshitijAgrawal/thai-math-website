@@ -20,7 +20,7 @@ const measurementCourse: CourseData = {
       duration: '20 นาที',
       completed: false,
       hasVideo: true, 
-      videoUrl: 'https://www.youtube.com/embed/0nFdIrJkd5Q',
+      videoUrl: 'https://www.youtube.com/embed/uZoIV69grU8',
       questions: [
         {
           id: 1,
@@ -105,7 +105,7 @@ const measurementCourse: CourseData = {
       title: 'การวัดปริมาณ',
       duration: '20 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/3O6pQeJ3s8U',
+      videoUrl: 'https://www.youtube.com/embed/0LRjhh5FH1Q',
       completed: false,
       questions: [
         {
@@ -129,7 +129,7 @@ const measurementCourse: CourseData = {
       title: 'การบอกเวลา - ชั่วโมง',
       duration: '30 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/4yX0qfS7wYk',
+      videoUrl: 'https://www.youtube.com/embed/rfh18vIx-rM',
       completed: false,
       questions: [
         {
@@ -160,7 +160,7 @@ const measurementCourse: CourseData = {
       title: 'การบอกเวลา - นาที',
       duration: '35 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/5Vh6lqF0xjM',
+      videoUrl: 'https://www.youtube.com/embed/04hvdrbd3Vk',
       completed: false,
       questions: [
         {
@@ -222,7 +222,7 @@ const measurementCourse: CourseData = {
       title: 'การแปลงหน่วย',
       duration: '30 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/0nFdIrJkd5Q',
+      videoUrl: 'https://www.youtube.com/embed/-dwv56YnWk8',
       completed: false,
       questions: [
         {
@@ -277,7 +277,7 @@ const measurementCourse: CourseData = {
       title: 'การประมาณค่า',
       duration: '25 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/0nFdIrJkd5Q',
+      videoUrl: 'https://www.youtube.com/embed/DHInlwK-c6A',
       completed: false,
       questions: [
         {

@@ -59,7 +59,7 @@ const additionCourse: CourseData = {
       title: 'การบวกไม่มีทดเลข',
       duration: '25 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/lSeNKVIP4PY',
+      videoUrl: 'https://www.youtube.com/embed/eP91LFzPWy4',
       completed: false,
       questions: [
         {
@@ -76,7 +76,7 @@ const additionCourse: CourseData = {
       title: 'การบวกมีทดเลข',
       duration: '30 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/ZZknZSI2oT0',
+      videoUrl: 'https://www.youtube.com/embed/ugaGVgERJE4',
       completed: false,
       questions: [
         {
@@ -93,7 +93,7 @@ const additionCourse: CourseData = {
       title: 'การลบพื้นฐาน',
       duration: '20 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/ZfCFOQBfC-I',
+      videoUrl: 'https://www.youtube.com/embed/FaOF6el8cXg',
       completed: false,
       questions: [
         {
@@ -178,7 +178,7 @@ const additionCourse: CourseData = {
       title: 'โจทย์ปัญหาการบวกลบ',
       duration: '30 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/H8FT4w1QPWI',
+      videoUrl: 'https://www.youtube.com/embed/1yh9CVARG4Q',
       completed: false,
       questions: [
         {

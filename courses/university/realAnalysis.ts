@@ -24,7 +24,7 @@ const realAnalysis = (): CourseData => ({
       title: 'Real Numbers และ Completeness',
       duration: '90 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/3r8M3jJj9qQ',
+      videoUrl: 'https://www.youtube.com/embed/0_w-R_g5lRA',
       completed: false,
       objectives: [
         'เข้าใจ axioms ของจำนวนจริง',
@@ -76,7 +76,7 @@ const realAnalysis = (): CourseData => ({
       title: 'Sequences และ Convergence',
       duration: '100 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/4s0N4kKk0uU',
+      videoUrl: 'https://www.youtube.com/embed/49Ro2zf9hAc',
       completed: false,
       objectives: [
         'พิสูจน์ convergence/divergence ของลำดับ',
@@ -123,7 +123,7 @@ const realAnalysis = (): CourseData => ({
       title: 'Series และ Tests for Convergence',
       duration: '105 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/5t2P5lLl1vY',
+      videoUrl: 'https://www.youtube.com/embed/z4oPviE02oE',
       completed: false,
       objectives: [
         'ใช้ comparison, ratio, และ root tests',
@@ -175,7 +175,7 @@ const realAnalysis = (): CourseData => ({
       title: 'Continuity และ Uniform Continuity',
       duration: '95 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/6u4Q6mMm2wA',
+      videoUrl: 'https://www.youtube.com/embed/f_sNWn7zujU',
       completed: false,
       objectives: [
         'พิสูจน์ continuity ด้วย ε-δ definition',
@@ -227,7 +227,7 @@ const realAnalysis = (): CourseData => ({
       title: 'Differentiation Theory',
       duration: '100 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/3r8M3jJj9qQ',
+      videoUrl: 'https://www.youtube.com/embed/V3Wg_jrMSQY',
       completed: false,
       objectives: [
         'พิสูจน์ Mean Value Theorem',
@@ -274,7 +274,7 @@ const realAnalysis = (): CourseData => ({
       title: 'Integration Theory',
       duration: '120 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/3r8M3jJj9qQ',
+      videoUrl: 'https://www.youtube.com/embed/QeYUHA0UMVg',
       completed: false,
       objectives: [
         'เข้าใจ Riemann integral definition',

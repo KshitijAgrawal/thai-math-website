@@ -25,7 +25,7 @@ const calculus = (): CourseData => ({
       title: 'ลิมิตและความต่อเนื่อง',
       duration: '60 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/jFKv2qXy3iE',
+      videoUrl: 'https://www.youtube.com/embed/TgidKxvTvTg',
       completed: false,
       objectives: [
         'เข้าใจแนวคิดของลิมิต',
@@ -67,7 +67,7 @@ const calculus = (): CourseData => ({
       title: 'อนุพันธ์พื้นฐาน',
       duration: '65 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/0D7B9FZkFpg',
+      videoUrl: 'https://www.youtube.com/embed/vOwDpm_VCeY',
       completed: false,
       objectives: [
         'เข้าใจความหมายของอนุพันธ์',
@@ -119,7 +119,7 @@ const calculus = (): CourseData => ({
       title: 'การประยุกต์ใช้อนุพันธ์',
       duration: '70 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/k6yP5j2YfD0',
+      videoUrl: 'https://www.youtube.com/embed/IJl9kGliT_A',
       completed: false,
       objectives: [
         'หาค่าสูงสุดและต่ำสุดของฟังก์ชัน',
@@ -161,7 +161,7 @@ const calculus = (): CourseData => ({
       title: 'ปริพันธ์ไม่จำกัดเขต',
       duration: '60 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/DjzY1qXo8Qc',
+      videoUrl: 'https://www.youtube.com/embed/KRovxctFF-I',
       completed: false,
       objectives: [
         'เข้าใจแนวคิดของปริพันธ์',
@@ -208,7 +208,7 @@ const calculus = (): CourseData => ({
       title: 'ปริพันธ์จำกัดเขตและพื้นที่',
       duration: '65 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/jFKv2qXy3iE',
+      videoUrl: 'https://www.youtube.com/embed/2uLJqXfd8Us',
       completed: false,
       objectives: [
         'คำนวณปริพันธ์จำกัดเขต',
@@ -250,7 +250,7 @@ const calculus = (): CourseData => ({
       title: 'ฟังก์ชันเลขชี้กำลังและลอการิทึม',
       duration: '55 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/jFKv2qXy3iE',
+      videoUrl: 'https://www.youtube.com/embed/FVVxsFm_hwM',
       completed: false,
       objectives: [
         'หาอนุพันธ์ของฟังก์ชันเลขชี้กำลัง',

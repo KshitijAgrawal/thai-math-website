@@ -18,7 +18,7 @@ const countingCourse: CourseData = {
       duration: '15 นาที',
       completed: false,
       hasVideo: true, 
-      videoUrl: 'https://www.youtube.com/embed/_MVzXKfr6e8',
+      videoUrl: 'https://www.youtube.com/embed/gsbCzCSIMqw',
       questions: [
         {
           id: 1,
@@ -58,7 +58,7 @@ const countingCourse: CourseData = {
       title: 'การนับ 21-50',
       duration: '20 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/6m1P6h6Iu8I',
+      videoUrl: 'https://www.youtube.com/embed/Y8Cvedrege0',
       completed: false,
       questions: [
         {
@@ -75,7 +75,7 @@ const countingCourse: CourseData = {
       title: 'การนับ 51-100',
       duration: '25 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/xk6uP0kK6mE',
+      videoUrl: 'https://www.youtube.com/embed/Y-JvL70LvHw',
       completed: false,
       questions: [
         {
@@ -92,7 +92,7 @@ const countingCourse: CourseData = {
       title: 'การเรียงลำดับตัวเลข',
       duration: '20 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/2t3p9k5eT1w',
+      videoUrl: 'https://www.youtube.com/embed/ZfCFOQBfC-I',
       completed: false,
       questions: [
         {
@@ -109,7 +109,7 @@ const countingCourse: CourseData = {
       title: 'การเปรียบเทียบตัวเลข',
       duration: '18 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/0BsXyQG5c9w',
+      videoUrl: 'https://www.youtube.com/embed/DcNOX6U7Veo',
       completed: false,
       questions: [
         {
@@ -126,7 +126,7 @@ const countingCourse: CourseData = {
       title: 'จำนวนคู่และคี่',
       duration: '20 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/8MZ5gk2t9oI',
+      videoUrl: 'https://www.youtube.com/embed/ASjJL1zh8z0',
       completed: false,
       questions: [
         {
@@ -143,7 +143,7 @@ const countingCourse: CourseData = {
       title: 'การนับข้าม',
       duration: '22 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/1eOqz0gk7jU',
+      videoUrl: 'https://www.youtube.com/embed/5TxZ3j9BoE4',
       completed: false,
       questions: [
         {

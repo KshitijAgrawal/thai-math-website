@@ -71,7 +71,7 @@ const matrices = (): CourseData => ({
       title: 'การบวกและลบเมทริกซ์',
       duration: '40 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/4V7bLw2FsCk',
+      videoUrl: 'https://www.youtube.com/embed/UGkKz9QbUck',
       completed: false,
       objectives: [
         'บวกและลบเมทริกซ์ที่มีขนาดเท่ากัน',
@@ -128,7 +128,7 @@ const matrices = (): CourseData => ({
       title: 'การคูณเมทริกซ์',
       duration: '60 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/9MBS3g6t4tU',
+      videoUrl: 'https://www.youtube.com/embed/d7QDKA7IBnU',
       completed: false,
       objectives: [
         'คูณเมทริกซ์ด้วยสเกลาร์',
@@ -175,7 +175,7 @@ const matrices = (): CourseData => ({
       title: 'ดีเทอร์มิแนนต์',
       duration: '55 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/8p4yYp2zTng',
+      videoUrl: 'https://www.youtube.com/embed/VKvso-uogn8',
       completed: false,
       objectives: [
         'หาดีเทอร์มิแนนต์ของเมทริกซ์ 2×2',
@@ -222,7 +222,7 @@ const matrices = (): CourseData => ({
       title: 'เมทริกซ์ผกผัน (Inverse Matrix)',
       duration: '65 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/0p7yK3BUK6w',
+      videoUrl: 'https://www.youtube.com/embed/_XOoaLkwdzk',
       completed: false,
       objectives: [
         'หาเมทริกซ์ผกผันของเมทริกซ์ 2×2',
@@ -269,7 +269,7 @@ const matrices = (): CourseData => ({
       title: 'การแก้ระบบสมการเชิงเส้นด้วยเมทริกซ์',
       duration: '70 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/1mR5H8m0d4I',
+      videoUrl: 'https://www.youtube.com/embed/QJ-8Vgf49Yo',
       completed: false,
       objectives: [
         'เขียนระบบสมการในรูปเมทริกซ์',

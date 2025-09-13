@@ -24,7 +24,7 @@ const vectors = (): CourseData => ({
       title: 'ความหมายและสัญลักษณ์ของเวกเตอร์',
       duration: '45 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/1f0aYkGZ6mI',
+      videoUrl: 'https://www.youtube.com/embed/VmisQSKhm9A',
       completed: false,
       objectives: [
         'เข้าใจความแตกต่างระหว่างเวกเตอร์และสเกลาร์',
@@ -66,7 +66,7 @@ const vectors = (): CourseData => ({
       title: 'การบวกและลบเวกเตอร์',
       duration: '50 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/zf1Fv1m6yso',
+      videoUrl: 'https://www.youtube.com/embed/xdBEd8lbP-o',
       completed: false,
       objectives: [
         'บวกและลบเวกเตอร์โดยใช้ส่วนประกอบ',
@@ -108,7 +108,7 @@ const vectors = (): CourseData => ({
       title: 'การคูณเวกเตอร์ด้วยสเกลาร์',
       duration: '40 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/7rA9wQn1XWw',
+      videoUrl: 'https://www.youtube.com/embed/bkWyz78Q0U8',
       completed: false,
       objectives: [
         'คูณเวกเตอร์ด้วยสเกลาร์',
@@ -150,7 +150,7 @@ const vectors = (): CourseData => ({
       title: 'ดอทโปรดักต์ (Dot Product)',
       duration: '55 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/2mXl2Dg3pJ0',
+      videoUrl: 'https://www.youtube.com/embed/17cCoqaf4DQ',
       completed: false,
       objectives: [
         'คำนวณดอทโปรดักต์ของเวกเตอร์',
@@ -192,7 +192,7 @@ const vectors = (): CourseData => ({
       title: 'ครอสโปรดักต์ (Cross Product)',
       duration: '60 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/D0u5y9o4rDc',
+      videoUrl: 'https://www.youtube.com/embed/OmYOZSIf2t8',
       completed: false,
       objectives: [
         'คำนวณครอสโปรดักต์ในระนาบ',
@@ -234,7 +234,7 @@ const vectors = (): CourseData => ({
       title: 'การประยุกต์ใช้เวกเตอร์ในเรขาคณิต',
       duration: '65 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/1f0aYkGZ6mI',
+      videoUrl: 'https://www.youtube.com/embed/R_F4JBTdSNo',
       completed: false,
       objectives: [
         'หาสมการเส้นตรงด้วยเวกเตอร์',

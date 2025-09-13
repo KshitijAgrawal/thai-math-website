@@ -23,7 +23,7 @@ const algebra = (): CourseData => ({
       title: 'ตัวแปรและนิพจน์พีชคณิต',
       duration: '45 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/h9I4m6lJxR0',
+      videoUrl: 'https://www.youtube.com/embed/N9ETBZ0wC2E',
       completed: false,
       objectives: [
         'เข้าใจความหมายของตัวแปร',
@@ -65,7 +65,7 @@ const algebra = (): CourseData => ({
       title: 'การแก้สมการเชิงเส้นพื้นฐาน',
       duration: '50 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/0a1Ck2H8W_g',
+      videoUrl: 'https://www.youtube.com/embed/WReuN3-xuTY',
       completed: false,
       objectives: [
         'เข้าใจหลักการแก้สมการ',
@@ -107,7 +107,7 @@ const algebra = (): CourseData => ({
       title: 'การจัดรูปนิพจน์พีชคณิต',
       duration: '45 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/m3V9Zb8o1T8',
+      videoUrl: 'https://www.youtube.com/embed/im7yKkIw5Tw',
       completed: false,
       objectives: [
         'รวมพจน์ที่เหมือนกัน',
@@ -149,7 +149,7 @@ const algebra = (): CourseData => ({
       title: 'การแก้สมการที่ซับซ้อนขึ้น',
       duration: '55 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/2VqC3I9Ew1g',
+      videoUrl: 'https://www.youtube.com/embed/X0SSEFANabs',
       completed: false,
       objectives: [
         'แก้สมการที่มีตัวแปรทั้งสองข้าง',
@@ -191,7 +191,7 @@ const algebra = (): CourseData => ({
       title: 'การแก้ปัญหาด้วยสมการ',
       duration: '60 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/h9I4m6lJxR0',
+      videoUrl: 'https://www.youtube.com/embed/e88w8plN3dw',
       completed: false,
       objectives: [
         'แปลปัญหาเป็นสมการ',
