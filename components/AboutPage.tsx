@@ -106,8 +106,12 @@ const AboutPage: React.FC<AboutPageProps> = ({ onBack }) => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl p-8 text-center">
-                <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-white text-4xl font-bold">ครู</span>
+                <div className="w-32 h-32 mx-auto mb-6">
+                  <img 
+                    src="/teacher-profile.png" 
+                    alt="ครูพี่ฝ้าย - ผู้ก่อตั้ง MathThai"
+                    className="w-full h-full rounded-full object-cover border-4 border-white shadow-lg"
+                  />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">ครูพี่ฝ้าย</h3>
                 <p className="text-gray-600 mb-4">ผู้ก่อตั้งและหัวหน้าทีมการสอน</p>
