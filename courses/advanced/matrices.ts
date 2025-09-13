@@ -23,6 +23,8 @@ const matrices = (): CourseData => ({
       id: 1,
       title: 'ความหมายและประเภทของเมทริกซ์',
       duration: '45 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/1mR5H8m0d4I',
       completed: false,
       objectives: [
         'เข้าใจคำจำกัดความของเมทริกซ์',
@@ -68,6 +70,8 @@ const matrices = (): CourseData => ({
       id: 2,
       title: 'การบวกและลบเมทริกซ์',
       duration: '40 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/4V7bLw2FsCk',
       completed: false,
       objectives: [
         'บวกและลบเมทริกซ์ที่มีขนาดเท่ากัน',
@@ -123,6 +127,8 @@ const matrices = (): CourseData => ({
       id: 3,
       title: 'การคูณเมทริกซ์',
       duration: '60 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/9MBS3g6t4tU',
       completed: false,
       objectives: [
         'คูณเมทริกซ์ด้วยสเกลาร์',
@@ -168,6 +174,8 @@ const matrices = (): CourseData => ({
       id: 4,
       title: 'ดีเทอร์มิแนนต์',
       duration: '55 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/8p4yYp2zTng',
       completed: false,
       objectives: [
         'หาดีเทอร์มิแนนต์ของเมทริกซ์ 2×2',
@@ -213,6 +221,8 @@ const matrices = (): CourseData => ({
       id: 5,
       title: 'เมทริกซ์ผกผัน (Inverse Matrix)',
       duration: '65 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/0p7yK3BUK6w',
       completed: false,
       objectives: [
         'หาเมทริกซ์ผกผันของเมทริกซ์ 2×2',
@@ -258,6 +268,8 @@ const matrices = (): CourseData => ({
       id: 6,
       title: 'การแก้ระบบสมการเชิงเส้นด้วยเมทริกซ์',
       duration: '70 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/1mR5H8m0d4I',
       completed: false,
       objectives: [
         'เขียนระบบสมการในรูปเมทริกซ์',

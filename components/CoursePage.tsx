@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ChevronLeft } from 'lucide-react';
+import { ChevronLeft, Play } from 'lucide-react';
 import { getCourseData } from '../courses';
 
 interface CoursePageProps {
@@ -19,6 +19,10 @@ const CoursePage: React.FC<CoursePageProps> = ({ courseKey, courseName, gradeLev
   const [userAnswers, setUserAnswers] = useState<number[]>([]);
   const [viewMode, setViewMode] = useState<'curriculum' | 'lesson'>('curriculum');
   const [completedLessons, setCompletedLessons] = useState<Set<number>>(new Set());
+  
+  // Video-related states
+  const [lessonMode, setLessonMode] = useState<'video' | 'questions'>('video');
+  const [videoCompleted, setVideoCompleted] = useState<Set<number>>(new Set());
 
   // Get course data from the modular course files
   const courseData = getCourseData(courseName, courseKey);
@@ -45,8 +49,8 @@ const CoursePage: React.FC<CoursePageProps> = ({ courseKey, courseName, gradeLev
   const handlePrevQuestion = () => {
     if (currentQuestion > 0) {
       setCurrentQuestion(currentQuestion - 1);
-      setSelectedAnswer(userAnswers[currentQuestion - 1] || null);
-      setShowExplanation(!!userAnswers[currentQuestion - 1]);
+      setSelectedAnswer(userAnswers[currentQuestion - 1] ?? null);
+      setShowExplanation(!!userAnswers[currentQuestion - 1] !== undefined);
     }
   };
 
@@ -57,6 +61,8 @@ const CoursePage: React.FC<CoursePageProps> = ({ courseKey, courseName, gradeLev
     setShowExplanation(false);
     setUserAnswers([]);
     setViewMode('lesson');
+    // Start with video if available, otherwise questions
+    setLessonMode(courseData.lessons[lessonIndex].hasVideo ? 'video' : 'questions');
   };
 
   if (viewMode === 'curriculum') {
@@ -179,7 +185,20 @@ const CoursePage: React.FC<CoursePageProps> = ({ courseKey, courseName, gradeLev
                           <h4 className="font-semibold text-gray-900 group-hover:text-blue-600">
                             บทที่ {lesson.id}: {lesson.title}
                           </h4>
-                          <p className="text-sm text-gray-600">{lesson.duration} • {lesson.questions.length} คำถาม</p>
+                          <div className="flex items-center space-x-3 text-sm text-gray-600">
+                            <span>{lesson.duration}</span>
+                            {lesson.hasVideo && lesson.videoUrl && (
+                              <>
+                                <span>•</span>
+                                <span className="flex items-center">
+                                  <Play className="w-3 h-3 mr-1" />
+                                  วิดีโอ
+                                </span>
+                              </>
+                            )}
+                            <span>•</span>
+                            <span>{lesson.questions.length} คำถาม</span>
+                          </div>
                         </div>
                       </div>
                       <span className="text-blue-600">→</span>
@@ -194,7 +213,7 @@ const CoursePage: React.FC<CoursePageProps> = ({ courseKey, courseName, gradeLev
     );
   }
 
-  // Lesson View (Interactive Questions)
+  // Lesson View with Video Support
   return (
     <div key={`lesson-view-${currentLesson}`} className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -217,189 +236,323 @@ const CoursePage: React.FC<CoursePageProps> = ({ courseKey, courseName, gradeLev
                 <p className="text-sm text-gray-600">{courseData.title}</p>
               </div>
             </div>
-            <div className="text-sm text-gray-600">
-              คำถาม {currentQuestion + 1} จาก {currentLessonData.questions.length}
-            </div>
+            
+            {/* Mode Toggle */}
+            {currentLessonData.hasVideo && currentLessonData.videoUrl ? (
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={() => setLessonMode('video')}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                    lessonMode === 'video' 
+                      ? 'bg-blue-600 text-white' 
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+                >
+                  <Play className="w-4 h-4 inline mr-1" />
+                  วิดีโอ
+                </button>
+                <button
+                  onClick={() => setLessonMode('questions')}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                    lessonMode === 'questions' 
+                      ? 'bg-blue-600 text-white' 
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+                >
+                  คำถาม ({currentQuestion + 1}/{currentLessonData.questions.length})
+                </button>
+              </div>
+            ) : (
+              <div className="text-sm text-gray-600">
+                คำถาม {currentQuestion + 1} จาก {currentLessonData.questions.length}
+              </div>
+            )}
           </div>
         </div>
       </header>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid lg:grid-cols-4 gap-8">
-          {/* Main Content */}
-          <div className="lg:col-span-3">
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              {/* Progress Bar */}
-              <div className="bg-gray-100 px-6 py-4">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm font-medium text-gray-700">ความคืบหน้า</span>
-                  <span className="text-sm text-gray-600">
-                    {Math.round(((currentQuestion + 1) / currentLessonData.questions.length) * 100)}%
-                  </span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div 
-                    className="bg-blue-500 h-2 rounded-full transition-all duration-300"
-                    style={{ width: `${((currentQuestion + 1) / currentLessonData.questions.length) * 100}%` }}
-                  ></div>
+          {lessonMode === 'video' && currentLessonData.hasVideo && currentLessonData.videoUrl ? (
+            // VIDEO VIEW
+            <>
+              <div className="lg:col-span-3">
+                <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                  {/* Video Player */}
+                  <div className="relative bg-black aspect-video">
+                    <iframe
+                      className="w-full h-full"
+                      src={currentLessonData.videoUrl}
+                      title={currentLessonData.title}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+
+                  {/* Video Info */}
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      {currentLessonData.title}
+                    </h3>
+                    
+                    {/* Learning objectives if available */}
+                    {currentLessonData.objectives && currentLessonData.objectives.length > 0 && (
+                      <div className="mb-4">
+                        <h4 className="font-semibold text-gray-800 mb-2">จุดประสงค์การเรียนรู้:</h4>
+                        <ul className="list-disc list-inside text-gray-600 space-y-1">
+                          {currentLessonData.objectives.map((objective, index) => (
+                            <li key={index}>{objective}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    
+                    {/* Video completion button */}
+                    <div className="flex items-center justify-between bg-gray-50 rounded-lg p-4">
+                      <div className="flex items-center space-x-4">
+                        <div className={`w-3 h-3 rounded-full ${
+                          videoCompleted.has(currentLesson) ? 'bg-green-500' : 'bg-gray-300'
+                        }`}></div>
+                        <span className="text-sm font-medium">
+                          {videoCompleted.has(currentLesson) ? 'วิดีโอดูเสร็จแล้ว' : 'กำลังดูวิดีโอ'}
+                        </span>
+                      </div>
+                      <div className="flex space-x-2">
+                        <button
+                          onClick={() => setVideoCompleted(prev => {
+                            const newSet = new Set(prev);
+                            newSet.add(currentLesson);
+                            return newSet;
+                          })}
+                          className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700"
+                        >
+                          ดูเสร็จแล้ว
+                        </button>
+                        <button
+                          onClick={() => setLessonMode('questions')}
+                          className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700"
+                        >
+                          ไปทำแบบทดสอบ →
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* Question Content */}
-              <div className="p-8">
-                <div className="mb-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                    คำถามที่ {currentQuestion + 1}
-                  </h2>
-                  <p className="text-xl text-gray-800 mb-6">
-                    {currentQuestionData.question}
-                  </p>
-                </div>
-
-                {/* Answer Options */}
-                <div className="space-y-4 mb-8">
-                  {currentQuestionData.options.map((option: string, index: number) => (
-                    <button
-                      key={`opt-${currentLesson}-${currentQuestion}-${index}`}
-                      onClick={() => handleAnswerSelect(index)}
-                      disabled={showExplanation}
-                      className={`w-full p-4 text-left rounded-lg border-2 transition-all ${
-                        selectedAnswer === index
-                          ? index === currentQuestionData.correctAnswer
-                            ? 'border-green-500 bg-green-50 text-green-800'
-                            : 'border-red-500 bg-red-50 text-red-800'
-                          : 'border-gray-200 hover:border-blue-300 hover:bg-blue-50'
-                      } ${showExplanation ? 'cursor-not-allowed' : 'cursor-pointer'}`}
-                    >
-                      <div className="flex items-center">
-                        <div className={`w-6 h-6 rounded-full border-2 mr-4 flex items-center justify-center ${
-                          selectedAnswer === index
-                            ? index === currentQuestionData.correctAnswer
-                              ? 'border-green-500 bg-green-500'
-                              : 'border-red-500 bg-red-500'
-                            : 'border-gray-300'
-                        }`}>
-                          {selectedAnswer === index && (
-                            <div className="w-2 h-2 rounded-full bg-white"></div>
-                          )}
-                        </div>
-                        <span className="text-lg">{option}</span>
-                      </div>
-                    </button>
-                  ))}
-                </div>
-
-                {/* Explanation */}
-                {showExplanation && (
-                  <div className={`p-6 rounded-lg mb-8 ${
-                    selectedAnswer === currentQuestionData.correctAnswer
-                      ? 'bg-green-50 border border-green-200'
-                      : 'bg-red-50 border border-red-200'
-                  }`}>
-                    <div className="flex items-center mb-3">
-                      {selectedAnswer === currentQuestionData.correctAnswer ? '✅' : '❌'}
-                      <span className={`font-semibold ml-2 ${
-                        selectedAnswer === currentQuestionData.correctAnswer
-                          ? 'text-green-800'
-                          : 'text-red-800'
-                      }`}>
-                        {selectedAnswer === currentQuestionData.correctAnswer ? 'ถูกต้อง!' : 'ไม่ถูกต้อง'}
+              {/* Video Sidebar */}
+              <div className="lg:col-span-1">
+                <div className="bg-white rounded-2xl shadow-lg p-6 sticky top-24">
+                  <h3 className="font-bold text-lg mb-4">เนื้อหาในบทเรียน</h3>
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between p-3 rounded-lg border border-blue-500 bg-blue-50">
+                      <span className="text-sm font-medium">วิดีโอบทเรียน</span>
+                      {videoCompleted.has(currentLesson) ? '✅' : '⏯️'}
+                    </div>
+                    <div className="flex items-center justify-between p-3 rounded-lg border border-gray-200">
+                      <span className="text-sm font-medium">แบบทดสอบ</span>
+                      <span className="text-sm text-gray-600">
+                        {currentLessonData.questions.length} ข้อ
                       </span>
                     </div>
-                    <p className="text-gray-700">{currentQuestionData.explanation}</p>
                   </div>
-                )}
-
-                {/* Navigation */}
-                <div className="flex justify-between items-center">
-                  <button
-                    onClick={handlePrevQuestion}
-                    disabled={currentQuestion === 0}
-                    className="flex items-center px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    ← คำถามก่อนหน้า
-                  </button>
-                  
-                  {currentQuestion < currentLessonData.questions.length - 1 ? (
-                    <button
-                      onClick={handleNextQuestion}
-                      disabled={!showExplanation}
-                      className="flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      คำถามถัดไป →
-                    </button>
-                  ) : (
-                    <button
-                    onClick={() => {
-                        // Mark lesson as completed
-                        setCompletedLessons(prev => {
-                          const newSet = new Set(prev);
-                          newSet.add(currentLesson);
-                          return newSet;
-                        });
-                        
-                        // Just switch view - let the lesson selection handler reset states
-                        setViewMode('curriculum');
-                      }}
-                      className="flex items-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700"
-                    >
-                      เสร็จสิ้นบทเรียน ✅
-                    </button>
-                  )}
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Sidebar */}
-          <div className="lg:col-span-1">
-            <div className="bg-white rounded-2xl shadow-lg p-6 sticky top-24">
-              <h3 className="font-bold text-lg mb-4">ความคืบหน้า</h3>
-              
-              {/* Score */}
-              <div className="mb-6">
-                <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <div className="text-2xl font-bold text-blue-600">
-                    {userAnswers.filter((answer, index) => 
-                      answer === currentLessonData.questions[index]?.correctAnswer
-                    ).length}/{userAnswers.length}
+            </>
+          ) : (
+            // QUESTIONS VIEW
+            <>
+              {/* Main Content */}
+              <div className="lg:col-span-3">
+                <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                  {/* Progress Bar */}
+                  <div className="bg-gray-100 px-6 py-4">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-sm font-medium text-gray-700">ความคืบหน้า</span>
+                      <span className="text-sm text-gray-600">
+                        {Math.round(((currentQuestion + 1) / currentLessonData.questions.length) * 100)}%
+                      </span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div 
+                        className="bg-blue-500 h-2 rounded-full transition-all duration-300"
+                        style={{ width: `${((currentQuestion + 1) / currentLessonData.questions.length) * 100}%` }}
+                      ></div>
+                    </div>
                   </div>
-                  <div className="text-sm text-gray-600">คำตอบที่ถูก</div>
-                </div>
-              </div>
 
-              {/* Question List */}
-              <div className="space-y-2">
-                <h4 className="font-semibold text-gray-900 mb-3">รายการคำถาม</h4>
-                {currentLessonData.questions.map((_: any, index: number) => (
-                  <button
-                    key={`qbtn-${currentLesson}-${index}`}
-                    onClick={() => {
-                      setCurrentQuestion(index);
-                      setSelectedAnswer(userAnswers[index] || null);
-                      setShowExplanation(!!userAnswers[index]);
-                    }}
-                    className={`w-full p-3 text-left rounded-lg border transition-colors ${
-                      index === currentQuestion
-                        ? 'border-blue-500 bg-blue-50'
-                        : userAnswers[index] !== undefined
-                        ? userAnswers[index] === currentLessonData.questions[index]?.correctAnswer
-                          ? 'border-green-200 bg-green-50'
-                          : 'border-red-200 bg-red-50'
-                        : 'border-gray-200 hover:border-gray-300'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="font-medium">คำถาม {index + 1}</span>
-                      {userAnswers[index] !== undefined && (
-                        userAnswers[index] === currentLessonData.questions[index]?.correctAnswer ? '✅' : '❌'
+                  {/* Question Content */}
+                  <div className="p-8">
+                    <div className="mb-8">
+                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                        คำถามที่ {currentQuestion + 1}
+                      </h2>
+                      <p className="text-xl text-gray-800 mb-6">
+                        {currentQuestionData.question}
+                      </p>
+                    </div>
+
+                    {/* Answer Options */}
+                    <div className="space-y-4 mb-8">
+                      {currentQuestionData.options.map((option: string, index: number) => (
+                        <button
+                          key={`opt-${currentLesson}-${currentQuestion}-${index}`}
+                          onClick={() => handleAnswerSelect(index)}
+                          disabled={showExplanation}
+                          className={`w-full p-4 text-left rounded-lg border-2 transition-all ${
+                            selectedAnswer === index
+                              ? index === currentQuestionData.correctAnswer
+                                ? 'border-green-500 bg-green-50 text-green-800'
+                                : 'border-red-500 bg-red-50 text-red-800'
+                              : 'border-gray-200 hover:border-blue-300 hover:bg-blue-50'
+                          } ${showExplanation ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+                        >
+                          <div className="flex items-center">
+                            <div className={`w-6 h-6 rounded-full border-2 mr-4 flex items-center justify-center ${
+                              selectedAnswer === index
+                                ? index === currentQuestionData.correctAnswer
+                                  ? 'border-green-500 bg-green-500'
+                                  : 'border-red-500 bg-red-500'
+                                : 'border-gray-300'
+                            }`}>
+                              {selectedAnswer === index && (
+                                <div className="w-2 h-2 rounded-full bg-white"></div>
+                              )}
+                            </div>
+                            <span className="text-lg">{option}</span>
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+
+                    {/* Explanation */}
+                    {showExplanation && (
+                      <div className={`p-6 rounded-lg mb-8 ${
+                        selectedAnswer === currentQuestionData.correctAnswer
+                          ? 'bg-green-50 border border-green-200'
+                          : 'bg-red-50 border border-red-200'
+                      }`}>
+                        <div className="flex items-center mb-3">
+                          {selectedAnswer === currentQuestionData.correctAnswer ? '✅' : '❌'}
+                          <span className={`font-semibold ml-2 ${
+                            selectedAnswer === currentQuestionData.correctAnswer
+                              ? 'text-green-800'
+                              : 'text-red-800'
+                          }`}>
+                            {selectedAnswer === currentQuestionData.correctAnswer ? 'ถูกต้อง!' : 'ไม่ถูกต้อง'}
+                          </span>
+                        </div>
+                        <p className="text-gray-700">{currentQuestionData.explanation}</p>
+                      </div>
+                    )}
+
+                    {/* Navigation */}
+                    <div className="flex justify-between items-center">
+                      <button
+                        onClick={handlePrevQuestion}
+                        disabled={currentQuestion === 0}
+                        className="flex items-center px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        ← คำถามก่อนหน้า
+                      </button>
+                      
+                      {currentQuestion < currentLessonData.questions.length - 1 ? (
+                        <button
+                          onClick={handleNextQuestion}
+                          disabled={!showExplanation}
+                          className="flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                          คำถามถัดไป →
+                        </button>
+                      ) : (
+                        <button
+                        onClick={() => {
+                            // Mark lesson as completed
+                            setCompletedLessons(prev => {
+                              const newSet = new Set(prev);
+                              newSet.add(currentLesson);
+                              return newSet;
+                            });
+                            
+                            // Switch back to curriculum view
+                            setViewMode('curriculum');
+                          }}
+                          className="flex items-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700"
+                        >
+                          เสร็จสิ้นบทเรียน ✅
+                        </button>
                       )}
                     </div>
-                  </button>
-                ))}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+
+              {/* Questions Sidebar */}
+              <div key="questions-sidebar" className="lg:col-span-1">
+                <div className="bg-white rounded-2xl shadow-lg p-6 sticky top-24">
+                  <h3 className="font-bold text-lg mb-4">ความคืบหน้า</h3>
+                  
+                  {/* Score */}
+                  <div className="mb-6">
+                    <div className="text-center p-4 bg-blue-50 rounded-lg">
+                      <div className="text-2xl font-bold text-blue-600">
+                        {userAnswers.filter((answer, index) => 
+                          answer === currentLessonData.questions[index]?.correctAnswer
+                        ).length}/{userAnswers.length}
+                      </div>
+                      <div className="text-sm text-gray-600">คำตอบที่ถูก</div>
+                    </div>
+                  </div>
+
+                  {/* Video Progress if available */}
+                  {currentLessonData.hasVideo && currentLessonData.videoUrl && (
+                    <div className="mb-6">
+                      <div className="text-center p-4 bg-purple-50 rounded-lg">
+                        <div className="text-lg font-bold text-purple-600">
+                          {videoCompleted.has(currentLesson) ? '✅' : '⏯️'}
+                        </div>
+                        <div className="text-sm text-gray-600">
+                          {videoCompleted.has(currentLesson) ? 'วิดีโอดูเสร็จแล้ว' : 'ยังไม่ได้ดูวิดีโอ'}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Question List */}
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-gray-900 mb-3">รายการคำถาม</h4>
+                    {currentLessonData.questions.map((_: any, index: number) => (
+                      <button
+                        key={`qbtn-${currentLesson}-${index}`}
+                        onClick={() => {
+                          setCurrentQuestion(index);
+                          setSelectedAnswer(userAnswers[index] ?? null);
+                          setShowExplanation(!!userAnswers[index] !== undefined);
+                        }}
+                        className={`w-full p-3 text-left rounded-lg border transition-colors ${
+                          index === currentQuestion
+                            ? 'border-blue-500 bg-blue-50'
+                            : userAnswers[index] !== undefined
+                            ? userAnswers[index] === currentLessonData.questions[index]?.correctAnswer
+                              ? 'border-green-200 bg-green-50'
+                              : 'border-red-200 bg-red-50'
+                            : 'border-gray-200 hover:border-gray-300'
+                        }`}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="font-medium">คำถาม {index + 1}</span>
+                          {userAnswers[index] !== undefined && (
+                            userAnswers[index] === currentLessonData.questions[index]?.correctAnswer ? '✅' : '❌'
+                          )}
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>

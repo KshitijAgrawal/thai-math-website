@@ -23,6 +23,8 @@ const advancedStatistics = (): CourseData => ({
       id: 1,
       title: 'การแจกแจงการสุ่มตัวอย่าง',
       duration: '60 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/0I4fQyW2G9A',
       completed: false,
       objectives: [
         'เข้าใจทฤษฎีบทขีดจำกัดกลาง',
@@ -63,6 +65,8 @@ const advancedStatistics = (): CourseData => ({
       id: 2,
       title: 'การประมาณค่าและช่วงความเชื่อมั่น',
       duration: '70 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/u0d0HBbSyYQ',
       completed: false,
       objectives: [
         'สร้างช่วงความเชื่อมั่นสำหรับค่าเฉลี่ย',
@@ -118,6 +122,8 @@ const advancedStatistics = (): CourseData => ({
       id: 3,
       title: 'การทดสอบสมมติฐานพื้นฐาน',
       duration: '80 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/6h2f5e7F3E0',
       completed: false,
       objectives: [
         'ตั้งสมมติฐานหลักและสมมติฐานรอง',
@@ -173,6 +179,8 @@ const advancedStatistics = (): CourseData => ({
       id: 4,
       title: 'การทดสอบค่าเฉลี่ย',
       duration: '65 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/rqv2W8WwFqo',
       completed: false,
       objectives: [
         'ทดสอบค่าเฉลี่ยประชากรเดียว',
@@ -228,6 +236,8 @@ const advancedStatistics = (): CourseData => ({
       id: 5,
       title: 'การวิเคราะห์ไค-สแควร์',
       duration: '60 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/0I4fQyW2G9A',
       completed: false,
       objectives: [
         'ทดสอบความเหมาะสมของการแจกแจง',
@@ -283,6 +293,8 @@ const advancedStatistics = (): CourseData => ({
       id: 6,
       title: 'การวิเคราะห์ความถดถอยเชิงเส้น',
       duration: '85 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/0I4fQyW2G9A',
       completed: false,
       objectives: [
         'หาสมการเส้นถดถอย',

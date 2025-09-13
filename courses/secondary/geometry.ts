@@ -23,6 +23,8 @@ const geometry = (): CourseData => ({
       id: 1,
       title: 'จุด เส้นตรง และระนาบ',
       duration: '45 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/4r8p8dQ9cJc',
       completed: false,
       objectives: [
         'เข้าใจแนวคิดของจุด เส้นตรง และระนาบ',
@@ -63,6 +65,8 @@ const geometry = (): CourseData => ({
       id: 2,
       title: 'มุมและการวัดมุม',
       duration: '50 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/1o3HcKp9rkc',
       completed: false,
       objectives: [
         'เข้าใจและจำแนกประเภทของมุม',
@@ -103,6 +107,8 @@ const geometry = (): CourseData => ({
       id: 3,
       title: 'รูปสามเหลี่ยม',
       duration: '55 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/0sA8b0o0ZyE',
       completed: false,
       objectives: [
         'จำแนกประเภทของสามเหลี่ยม',
@@ -143,6 +149,8 @@ const geometry = (): CourseData => ({
       id: 4,
       title: 'รูปสี่เหลี่ยม',
       duration: '50 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/1aGkQ3q87iQ',
       completed: false,
       objectives: [
         'จำแนกประเภทของสี่เหลี่ยม',
@@ -183,6 +191,8 @@ const geometry = (): CourseData => ({
       id: 5,
       title: 'รูปวงกลม',
       duration: '45 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/Yc7TnPoBqDg',
       completed: false,
       objectives: [
         'เข้าใจส่วนประกอบของวงกลม',
@@ -223,6 +233,8 @@ const geometry = (): CourseData => ({
       id: 6,
       title: 'ทฤษฎีบทพีทาโกรัส',
       duration: '60 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/4r8p8dQ9cJc',
       completed: false,
       objectives: [
         'เข้าใจทฤษฎีบทพีทาโกรัส',

@@ -23,6 +23,8 @@ const realAnalysis = (): CourseData => ({
       id: 1,
       title: 'Real Numbers และ Completeness',
       duration: '90 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/3r8M3jJj9qQ',
       completed: false,
       objectives: [
         'เข้าใจ axioms ของจำนวนจริง',
@@ -73,6 +75,8 @@ const realAnalysis = (): CourseData => ({
       id: 2,
       title: 'Sequences และ Convergence',
       duration: '100 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/4s0N4kKk0uU',
       completed: false,
       objectives: [
         'พิสูจน์ convergence/divergence ของลำดับ',
@@ -118,6 +122,8 @@ const realAnalysis = (): CourseData => ({
       id: 3,
       title: 'Series และ Tests for Convergence',
       duration: '105 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/5t2P5lLl1vY',
       completed: false,
       objectives: [
         'ใช้ comparison, ratio, และ root tests',
@@ -168,6 +174,8 @@ const realAnalysis = (): CourseData => ({
       id: 4,
       title: 'Continuity และ Uniform Continuity',
       duration: '95 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/6u4Q6mMm2wA',
       completed: false,
       objectives: [
         'พิสูจน์ continuity ด้วย ε-δ definition',
@@ -218,6 +226,8 @@ const realAnalysis = (): CourseData => ({
       id: 5,
       title: 'Differentiation Theory',
       duration: '100 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/3r8M3jJj9qQ',
       completed: false,
       objectives: [
         'พิสูจน์ Mean Value Theorem',
@@ -263,6 +273,8 @@ const realAnalysis = (): CourseData => ({
       id: 6,
       title: 'Integration Theory',
       duration: '120 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/3r8M3jJj9qQ',
       completed: false,
       objectives: [
         'เข้าใจ Riemann integral definition',

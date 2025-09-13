@@ -24,6 +24,8 @@ const probability = (): CourseData => ({
       title: 'แนวคิดพื้นฐานของความน่าจะเป็น',
       duration: '45 นาที',
       completed: false,
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/fLd-dSgifxU',
       objectives: [
         'เข้าใจความหมายของความน่าจะเป็น',
         'จำแนกเหตุการณ์ที่เป็นไปได้',
@@ -64,6 +66,8 @@ const probability = (): CourseData => ({
       title: 'การคำนวณความน่าจะเป็นพื้นฐาน',
       duration: '50 นาที',
       completed: false,
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/kEgaIIYYudo',
       objectives: [
         'ใช้สูตรความน่าจะเป็นพื้นฐาน',
         'คำนวณความน่าจะเป็นของการทอยลูกเต๋า',
@@ -104,6 +108,8 @@ const probability = (): CourseData => ({
       title: 'ความน่าจะเป็นของเหตุการณ์รวม',
       duration: '55 นาที',
       completed: false,
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/53dPZ9G14W4',
       objectives: [
         'เข้าใจเหตุการณ์ที่ไม่ซ้ำกัน',
         'คำนวณความน่าจะเป็นของเหตุการณ์รวม',
@@ -144,6 +150,8 @@ const probability = (): CourseData => ({
       title: 'ต้นไม้ความน่าจะเป็น',
       duration: '60 นาที',
       completed: false,
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/W-zQXQT4qRU',
       objectives: [
         'เข้าใจการใช้ต้นไม้ความน่าจะเป็น',
         'แก้ปัญหาเหตุการณ์ต่อเนื่อง',
@@ -184,6 +192,8 @@ const probability = (): CourseData => ({
       title: 'การประยุกต์ใช้ความน่าจะเป็น',
       duration: '50 นาที',
       completed: false,
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/C06y6GagAbg',
       objectives: [
         'ประยุกต์ใช้ในสถานการณ์จริง',
         'แก้ปัญหาความน่าจะเป็นในเกม',

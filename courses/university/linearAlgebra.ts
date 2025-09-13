@@ -23,6 +23,8 @@ const linearAlgebra = (): CourseData => ({
       id: 1,
       title: 'Vector Spaces และ Subspaces',
       duration: '90 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/9m0I9fFf5wA',
       completed: false,
       objectives: [
         'เข้าใจคำจำกัดความของ vector space',
@@ -63,6 +65,8 @@ const linearAlgebra = (): CourseData => ({
       id: 2,
       title: 'Linear Independence และ Basis',
       duration: '85 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/0n2J0gGg6xE',
       completed: false,
       objectives: [
         'ตรวจสอบความเป็นอิสระเชิงเส้น',
@@ -108,6 +112,8 @@ const linearAlgebra = (): CourseData => ({
       id: 3,
       title: 'Linear Transformations',
       duration: '95 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/1p4K1hHh7yI',
       completed: false,
       objectives: [
         'เข้าใจคำจำกัดความของ linear transformation',
@@ -153,6 +159,8 @@ const linearAlgebra = (): CourseData => ({
       id: 4,
       title: 'Eigenvalues และ Eigenvectors',
       duration: '100 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/2q6L2iIi8kM',
       completed: false,
       objectives: [
         'หา eigenvalues และ eigenvectors',
@@ -198,6 +206,8 @@ const linearAlgebra = (): CourseData => ({
       id: 5,
       title: 'Inner Product Spaces',
       duration: '80 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/9m0I9fFf5wA',
       completed: false,
       objectives: [
         'เข้าใจคำจำกัดความของ inner product',
@@ -243,6 +253,8 @@ const linearAlgebra = (): CourseData => ({
       id: 6,
       title: 'Applications และ Special Matrices',
       duration: '90 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/9m0I9fFf5wA',
       completed: false,
       objectives: [
         'ประยุกต์ใช้ในปัญหา least squares',

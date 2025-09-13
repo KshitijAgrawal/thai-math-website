@@ -18,6 +18,8 @@ const additionCourse: CourseData = {
       title: 'การบวกพื้นฐาน 1-5',
       duration: '20 นาที',
       completed: false,
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/kfgfkmDAdzA',
       questions: [
         {
           id: 1,
@@ -39,6 +41,8 @@ const additionCourse: CourseData = {
       id: 2,
       title: 'การบวกพื้นฐาน 6-10',
       duration: '20 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/QsleFE-C6K8',
       completed: false,
       questions: [
         {
@@ -54,6 +58,8 @@ const additionCourse: CourseData = {
       id: 3,
       title: 'การบวกไม่มีทดเลข',
       duration: '25 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/lSeNKVIP4PY',
       completed: false,
       questions: [
         {
@@ -69,6 +75,8 @@ const additionCourse: CourseData = {
       id: 4,
       title: 'การบวกมีทดเลข',
       duration: '30 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/ZZknZSI2oT0',
       completed: false,
       questions: [
         {
@@ -84,6 +92,8 @@ const additionCourse: CourseData = {
       id: 5,
       title: 'การลบพื้นฐาน',
       duration: '20 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/ZfCFOQBfC-I',
       completed: false,
       questions: [
         {
@@ -99,6 +109,8 @@ const additionCourse: CourseData = {
       id: 6,
       title: 'การลบไม่มีการยืม',
       duration: '25 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/DcNOX6U7Veo',
       completed: false,
       questions: [
         {
@@ -114,6 +126,8 @@ const additionCourse: CourseData = {
       id: 7,
       title: 'การลบมีการยืม',
       duration: '30 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/pMpG2Ur9ttg',
       completed: false,
       questions: [
         {
@@ -129,6 +143,8 @@ const additionCourse: CourseData = {
       id: 8,
       title: 'การบวกลบผสม',
       duration: '25 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/4JSag_wZoaI',
       completed: false,
       questions: [
         {
@@ -144,6 +160,8 @@ const additionCourse: CourseData = {
       id: 9,
       title: 'การตรวจสอบคำตอบ',
       duration: '20 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/6ged8ayqDO4',
       completed: false,
       questions: [
         {
@@ -159,6 +177,8 @@ const additionCourse: CourseData = {
       id: 10,
       title: 'โจทย์ปัญหาการบวกลบ',
       duration: '30 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/H8FT4w1QPWI',
       completed: false,
       questions: [
         {

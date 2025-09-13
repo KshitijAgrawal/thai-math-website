@@ -22,6 +22,8 @@ const algebra = (): CourseData => ({
       id: 1,
       title: 'ตัวแปรและนิพจน์พีชคณิต',
       duration: '45 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/h9I4m6lJxR0',
       completed: false,
       objectives: [
         'เข้าใจความหมายของตัวแปร',
@@ -62,6 +64,8 @@ const algebra = (): CourseData => ({
       id: 2,
       title: 'การแก้สมการเชิงเส้นพื้นฐาน',
       duration: '50 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/0a1Ck2H8W_g',
       completed: false,
       objectives: [
         'เข้าใจหลักการแก้สมการ',
@@ -102,6 +106,8 @@ const algebra = (): CourseData => ({
       id: 3,
       title: 'การจัดรูปนิพจน์พีชคณิต',
       duration: '45 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/m3V9Zb8o1T8',
       completed: false,
       objectives: [
         'รวมพจน์ที่เหมือนกัน',
@@ -142,6 +148,8 @@ const algebra = (): CourseData => ({
       id: 4,
       title: 'การแก้สมการที่ซับซ้อนขึ้น',
       duration: '55 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/2VqC3I9Ew1g',
       completed: false,
       objectives: [
         'แก้สมการที่มีตัวแปรทั้งสองข้าง',
@@ -182,6 +190,8 @@ const algebra = (): CourseData => ({
       id: 5,
       title: 'การแก้ปัญหาด้วยสมการ',
       duration: '60 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/h9I4m6lJxR0',
       completed: false,
       objectives: [
         'แปลปัญหาเป็นสมการ',

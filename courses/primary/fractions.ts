@@ -18,6 +18,8 @@ const fractionsCourse: CourseData = {
       title: 'ความหมายของเศษส่วน',
       duration: '20 นาที',
       completed: false,
+      hasVideo: true, 
+      videoUrl: 'https://www.youtube.com/embed/0XYkX2j63iQ',
       questions: [
         {
           id: 1,
@@ -39,6 +41,8 @@ const fractionsCourse: CourseData = {
       id: 2,
       title: 'การเปรียบเทียบเศษส่วน',
       duration: '25 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/3rJr6iIYwB4',
       completed: false,
       questions: [
         {
@@ -61,6 +65,8 @@ const fractionsCourse: CourseData = {
       id: 3,
       title: 'การบวกเศษส่วนเดียวกัน',
       duration: '20 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/4mIh9u3XwGQ',
       completed: false,
       questions: [
         {
@@ -83,6 +89,8 @@ const fractionsCourse: CourseData = {
       id: 4,
       title: 'การลบเศษส่วนเดียวกัน',
       duration: '20 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/5cGf0p2YjYw',
       completed: false,
       questions: [
         {
@@ -105,6 +113,8 @@ const fractionsCourse: CourseData = {
       id: 5,
       title: 'การบวกเศษส่วนต่างกัน',
       duration: '30 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/6sN8Kf0LkFY',
       completed: false,
       questions: [
         {
@@ -127,6 +137,8 @@ const fractionsCourse: CourseData = {
       id: 6,
       title: 'การลบเศษส่วนต่างกัน',
       duration: '30 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/7Tz3Vw2oQv8',
       completed: false,
       questions: [
         {
@@ -149,6 +161,8 @@ const fractionsCourse: CourseData = {
       id: 7,
       title: 'การคูณเศษส่วน',
       duration: '25 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/8yL9sZ3jQyM',
       completed: false,
       questions: [
         {
@@ -171,6 +185,8 @@ const fractionsCourse: CourseData = {
       id: 8,
       title: 'การหารเศษส่วน',
       duration: '30 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/9Qh6pMxVbTo',
       completed: false,
       questions: [
         {
@@ -193,6 +209,8 @@ const fractionsCourse: CourseData = {
       id: 9,
       title: 'การแปลงเศษส่วนเป็นทศนิยม',
       duration: '25 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/0XYkX2j63iQ',
       completed: false,
       questions: [
         {
@@ -215,6 +233,8 @@ const fractionsCourse: CourseData = {
       id: 10,
       title: 'โจทย์ปัญหาเศษส่วน',
       duration: '30 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/0XYkX2j63iQ',
       completed: false,
       questions: [
         {

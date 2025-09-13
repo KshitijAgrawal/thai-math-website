@@ -21,6 +21,8 @@ export interface Lesson {
   questions: Question[];
   completed: boolean;
   objectives?: string[];
+  hasVideo?: boolean;
+  videoUrl?: string;
 }
 
 export interface CourseData {

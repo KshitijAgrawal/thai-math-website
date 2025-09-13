@@ -24,6 +24,8 @@ const calculus = (): CourseData => ({
       id: 1,
       title: 'ลิมิตและความต่อเนื่อง',
       duration: '60 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/jFKv2qXy3iE',
       completed: false,
       objectives: [
         'เข้าใจแนวคิดของลิมิต',
@@ -64,6 +66,8 @@ const calculus = (): CourseData => ({
       id: 2,
       title: 'อนุพันธ์พื้นฐาน',
       duration: '65 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/0D7B9FZkFpg',
       completed: false,
       objectives: [
         'เข้าใจความหมายของอนุพันธ์',
@@ -114,6 +118,8 @@ const calculus = (): CourseData => ({
       id: 3,
       title: 'การประยุกต์ใช้อนุพันธ์',
       duration: '70 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/k6yP5j2YfD0',
       completed: false,
       objectives: [
         'หาค่าสูงสุดและต่ำสุดของฟังก์ชัน',
@@ -154,6 +160,8 @@ const calculus = (): CourseData => ({
       id: 4,
       title: 'ปริพันธ์ไม่จำกัดเขต',
       duration: '60 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/DjzY1qXo8Qc',
       completed: false,
       objectives: [
         'เข้าใจแนวคิดของปริพันธ์',
@@ -199,6 +207,8 @@ const calculus = (): CourseData => ({
       id: 5,
       title: 'ปริพันธ์จำกัดเขตและพื้นที่',
       duration: '65 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/jFKv2qXy3iE',
       completed: false,
       objectives: [
         'คำนวณปริพันธ์จำกัดเขต',
@@ -239,6 +249,8 @@ const calculus = (): CourseData => ({
       id: 6,
       title: 'ฟังก์ชันเลขชี้กำลังและลอการิทึม',
       duration: '55 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/jFKv2qXy3iE',
       completed: false,
       objectives: [
         'หาอนุพันธ์ของฟังก์ชันเลขชี้กำลัง',

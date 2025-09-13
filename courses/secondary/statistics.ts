@@ -24,6 +24,8 @@ const statistics = (): CourseData => ({
       title: 'การเก็บรวบรวมข้อมูล',
       duration: '45 นาที',
       completed: false,
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/kJUOxUL3IdA',
       objectives: [
         'เข้าใจประเภทของข้อมูล',
         'วิธีการเก็บรวบรวมข้อมูล',
@@ -79,6 +81,8 @@ const statistics = (): CourseData => ({
       title: 'การจัดกลุ่มข้อมูลและตารางความถี่',
       duration: '50 นาที',
       completed: false,
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/pbTJa9C_OcY',
       objectives: [
         'จัดกลุ่มข้อมูลอย่างเป็นระบบ',
         'สร้างตารางความถี่',
@@ -124,6 +128,8 @@ const statistics = (): CourseData => ({
       title: 'การแสดงข้อมูลด้วยกราฟ',
       duration: '55 นาที',
       completed: false,
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/YBMppPwST9o',
       objectives: [
         'สร้างและอ่านแผนภูมิแท่ง',
         'สร้างและอ่านแผนภูมิวงกลม',
@@ -174,6 +180,8 @@ const statistics = (): CourseData => ({
       title: 'ค่าเฉลี่ย (Mean)',
       duration: '50 นาที',
       completed: false,
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/W0b1Pqpp1D8',
       objectives: [
         'เข้าใจความหมายของค่าเฉลี่ย',
         'คำนวณค่าเฉลี่ยของข้อมูล',
@@ -214,6 +222,8 @@ const statistics = (): CourseData => ({
       title: 'ค่ากลาง (Median) และฐานนิยม (Mode)',
       duration: '55 นาที',
       completed: false,
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/WH7ui3jayYI',
       objectives: [
         'เข้าใจและคำนวณค่ากลาง',
         'เข้าใจและหาฐานนิยม',
@@ -254,6 +264,8 @@ const statistics = (): CourseData => ({
       title: 'การแปลความหมายและสรุปผล',
       duration: '45 นาที',
       completed: false,
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/TCblAkOCi94',
       objectives: [
         'แปลความหมายข้อมูลสถิติ',
         'เปรียบเทียบข้อมูลชุดต่างๆ',

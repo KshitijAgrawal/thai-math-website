@@ -23,6 +23,8 @@ const complexAnalysis = (): CourseData => ({
       id: 1,
       title: 'Complex Numbers และ Functions',
       duration: '85 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/1e4A1pQw7jQ',
       completed: false,
       objectives: [
         'ทบทวน complex numbers และ operations',
@@ -63,6 +65,8 @@ const complexAnalysis = (): CourseData => ({
       id: 2,
       title: 'Analytic Functions',
       duration: '100 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/2f6B2rXy8kA',
       completed: false,
       objectives: [
         'เข้าใจ complex derivatives และ Cauchy-Riemann equations',
@@ -108,6 +112,8 @@ const complexAnalysis = (): CourseData => ({
       id: 3,
       title: 'Complex Integration',
       duration: '110 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/3g8C3tZz9mE',
       completed: false,
       objectives: [
         'คำนวณ line integrals ใน complex plane',
@@ -153,6 +159,8 @@ const complexAnalysis = (): CourseData => ({
       id: 4,
       title: 'Cauchy Integral Formula',
       duration: '95 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/4h0D4uAa0qI',
       completed: false,
       objectives: [
         'ใช้ Cauchy integral formula',
@@ -203,6 +211,8 @@ const complexAnalysis = (): CourseData => ({
       id: 5,
       title: 'Series Representations',
       duration: '105 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/1e4A1pQw7jQ',
       completed: false,
       objectives: [
         'หา Taylor และ Laurent series',
@@ -253,6 +263,8 @@ const complexAnalysis = (): CourseData => ({
       id: 6,
       title: 'Residue Theory และ Applications',
       duration: '120 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/1e4A1pQw7jQ',
       completed: false,
       objectives: [
         'คำนวณ residues',

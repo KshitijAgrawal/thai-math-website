@@ -17,6 +17,8 @@ const countingCourse: CourseData = {
       title: 'การนับ 1-10',
       duration: '15 นาที',
       completed: false,
+      hasVideo: true, 
+      videoUrl: 'https://www.youtube.com/embed/_MVzXKfr6e8',
       questions: [
         {
           id: 1,
@@ -38,6 +40,8 @@ const countingCourse: CourseData = {
       id: 2,
       title: 'การนับ 11-20',
       duration: '15 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/7FxN89ufXBs',
       completed: false,
       questions: [
         {
@@ -53,6 +57,8 @@ const countingCourse: CourseData = {
       id: 3,
       title: 'การนับ 21-50',
       duration: '20 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/6m1P6h6Iu8I',
       completed: false,
       questions: [
         {
@@ -68,6 +74,8 @@ const countingCourse: CourseData = {
       id: 4,
       title: 'การนับ 51-100',
       duration: '25 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/xk6uP0kK6mE',
       completed: false,
       questions: [
         {
@@ -83,6 +91,8 @@ const countingCourse: CourseData = {
       id: 5,
       title: 'การเรียงลำดับตัวเลข',
       duration: '20 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/2t3p9k5eT1w',
       completed: false,
       questions: [
         {
@@ -98,6 +108,8 @@ const countingCourse: CourseData = {
       id: 6,
       title: 'การเปรียบเทียบตัวเลข',
       duration: '18 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/0BsXyQG5c9w',
       completed: false,
       questions: [
         {
@@ -113,6 +125,8 @@ const countingCourse: CourseData = {
       id: 7,
       title: 'จำนวนคู่และคี่',
       duration: '20 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/8MZ5gk2t9oI',
       completed: false,
       questions: [
         {
@@ -128,6 +142,8 @@ const countingCourse: CourseData = {
       id: 8,
       title: 'การนับข้าม',
       duration: '22 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/1eOqz0gk7jU',
       completed: false,
       questions: [
         {
@@ -143,6 +159,8 @@ const countingCourse: CourseData = {
       id: 9,
       title: 'ตัวเลขหลักเดียว',
       duration: '15 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/_MVzXKfr6e8',
       completed: false,
       questions: [
         {
@@ -158,6 +176,8 @@ const countingCourse: CourseData = {
       id: 10,
       title: 'ตัวเลขสองหลัก',
       duration: '18 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/_MVzXKfr6e8',
       completed: false,
       questions: [
         {

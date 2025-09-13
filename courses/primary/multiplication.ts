@@ -18,6 +18,8 @@ const multiplicationCourse: CourseData = {
       title: 'สูตรคูณแม่ 2',
       duration: '25 นาที',
       completed: false,
+      hasVideo: true, 
+      videoUrl: 'https://www.youtube.com/embed/sSqJQVjkgBM',
       questions: [
         {
           id: 1,
@@ -46,6 +48,8 @@ const multiplicationCourse: CourseData = {
       id: 2,
       title: 'สูตรคูณแม่ 3',
       duration: '25 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/2l0kCkP2t9E',
       completed: false,
       questions: [
         {
@@ -68,6 +72,8 @@ const multiplicationCourse: CourseData = {
       id: 3,
       title: 'สูตรคูณแม่ 4',
       duration: '25 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/3uYdV9pUe2s',
       completed: false,
       questions: [
         {
@@ -90,6 +96,8 @@ const multiplicationCourse: CourseData = {
       id: 4,
       title: 'สูตรคูณแม่ 5',
       duration: '20 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/4aQpY6tRk3w',
       completed: false,
       questions: [
         {
@@ -112,6 +120,8 @@ const multiplicationCourse: CourseData = {
       id: 5,
       title: 'สูตรคูณแม่ 6-9',
       duration: '35 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/5bRvU8yWx1Q',
       completed: false,
       questions: [
         {
@@ -141,6 +151,8 @@ const multiplicationCourse: CourseData = {
       id: 6,
       title: 'การคูณสองหลัก',
       duration: '30 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/6dKxV2nQy0A',
       completed: false,
       questions: [
         {
@@ -163,6 +175,8 @@ const multiplicationCourse: CourseData = {
       id: 7,
       title: 'การหารพื้นฐาน',
       duration: '25 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/7eTjW3mLp9I',
       completed: false,
       questions: [
         {
@@ -185,6 +199,8 @@ const multiplicationCourse: CourseData = {
       id: 8,
       title: 'การหารมีเศษ',
       duration: '30 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/8fUmY4nQq2E',
       completed: false,
       questions: [
         {
@@ -207,6 +223,8 @@ const multiplicationCourse: CourseData = {
       id: 9,
       title: 'ความสัมพันธ์คูณหาร',
       duration: '25 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/sSqJQVjkgBM',
       completed: false,
       questions: [
         {
@@ -229,6 +247,8 @@ const multiplicationCourse: CourseData = {
       id: 10,
       title: 'โจทย์ปัญหาการคูณหาร',
       duration: '30 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/sSqJQVjkgBM',
       completed: false,
       questions: [
         {

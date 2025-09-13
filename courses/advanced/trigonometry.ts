@@ -23,6 +23,8 @@ const trigonometry = (): CourseData => ({
       id: 1,
       title: 'อัตราส่วนตรีโกณมิติพื้นฐาน',
       duration: '50 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/gk0cX2qg1FQ',
       completed: false,
       objectives: [
         'เข้าใจ sin, cos, tan ในสามเหลี่ยมมุมฉาก',
@@ -63,6 +65,8 @@ const trigonometry = (): CourseData => ({
       id: 2,
       title: 'ฟังก์ชันตรีโกณมิติและกราฟ',
       duration: '60 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/7QYf6xg7cgs',
       completed: false,
       objectives: [
         'เข้าใจกราฟ sin, cos, tan',
@@ -103,6 +107,8 @@ const trigonometry = (): CourseData => ({
       id: 3,
       title: 'เอกลักษณ์ตรีโกณมิติ',
       duration: '55 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/2kQ0wz2r7yY',
       completed: false,
       objectives: [
         'ใช้เอกลักษณ์พีทาโกรัส',
@@ -148,6 +154,8 @@ const trigonometry = (): CourseData => ({
       id: 4,
       title: 'การแก้สมการตรีโกณมิติ',
       duration: '65 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/9h3k4eQmKfM',
       completed: false,
       objectives: [
         'แก้สมการตรีโกณมิติพื้นฐาน',
@@ -188,6 +196,8 @@ const trigonometry = (): CourseData => ({
       id: 5,
       title: 'กฎไซน์และกฎโคไซน์',
       duration: '70 นาที',
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/gk0cX2qg1FQ',
       completed: false,
       objectives: [
         'ใช้กฎไซน์แก้สามเหลี่ยม',

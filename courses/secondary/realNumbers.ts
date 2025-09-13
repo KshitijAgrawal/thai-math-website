@@ -25,6 +25,8 @@ const realNumbers = (): CourseData => ({
       title: 'ระบบจำนวนจริง',
       duration: '50 นาที',
       completed: false,
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/gpdoXG8-X3w',
       objectives: [
         'จำแนกประเภทของจำนวน',
         'เข้าใจความสำคัญของจำนวนจริง',
@@ -75,6 +77,8 @@ const realNumbers = (): CourseData => ({
       title: 'จำนวนตรรกยะและอตรรกยะ',
       duration: '55 นาที',
       completed: false,
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/XRrjaekQPW0',
       objectives: [
         'เข้าใจความแตกต่างระหว่างจำนวนตรรกยะและอตรรกยะ',
         'แปลงเศษส่วนเป็นทศนิยม',
@@ -115,6 +119,8 @@ const realNumbers = (): CourseData => ({
       title: 'การดำเนินการกับจำนวนจริง',
       duration: '60 นาที',
       completed: false,
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/rpZLMd5A7qM',
       objectives: [
         'บวก ลบ คูณ หารจำนวนจริง',
         'ใช้สมบัติของการดำเนินการ',
@@ -155,6 +161,8 @@ const realNumbers = (): CourseData => ({
       title: 'รากที่สองและเลขยกกำลัง',
       duration: '55 นาที',
       completed: false,
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/_YsGMt_3hMU',
       objectives: [
         'คำนวณรากที่สองของจำนวนต่างๆ',
         'ใช้กฎเลขยกกำลังกับจำนวนจริง',
@@ -195,6 +203,8 @@ const realNumbers = (): CourseData => ({
       title: 'อสมการเชิงเส้น',
       duration: '60 นาที',
       completed: false,
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/MOqSq1e_GFY',
       objectives: [
         'เข้าใจและแก้อสมการเชิงเส้น',
         'แสดงผลลัพธ์บนเส้นจำนวน',
@@ -235,6 +245,8 @@ const realNumbers = (): CourseData => ({
       title: 'การประยุกต์ใช้จำนวนจริง',
       duration: '50 นาที',
       completed: false,
+      hasVideo: true,
+      videoUrl: 'https://www.youtube.com/embed/il1yHOLNIaw',
       objectives: [
         'ใช้จำนวนจริงในการแก้ปัญหาจริง',
         'ประมาณค่าจำนวนอตรรกยะ',
