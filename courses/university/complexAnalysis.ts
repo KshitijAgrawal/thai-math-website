@@ -24,7 +24,7 @@ const complexAnalysis = (): CourseData => ({
       title: 'Complex Numbers และ Functions',
       duration: '85 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/1e4A1pQw7jQ',
+      videoUrl: 'https://www.youtube.com/embed/BOx8LRyr8mU',
       completed: false,
       objectives: [
         'ทบทวน complex numbers และ operations',
@@ -66,7 +66,7 @@ const complexAnalysis = (): CourseData => ({
       title: 'Analytic Functions',
       duration: '100 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/2f6B2rXy8kA',
+      videoUrl: 'https://www.youtube.com/embed/pAq_dilfB_0',
       completed: false,
       objectives: [
         'เข้าใจ complex derivatives และ Cauchy-Riemann equations',
@@ -113,7 +113,7 @@ const complexAnalysis = (): CourseData => ({
       title: 'Complex Integration',
       duration: '110 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/3g8C3tZz9mE',
+      videoUrl: 'https://www.youtube.com/embed/gpZu5N1FFq0',
       completed: false,
       objectives: [
         'คำนวณ line integrals ใน complex plane',
@@ -160,7 +160,7 @@ const complexAnalysis = (): CourseData => ({
       title: 'Cauchy Integral Formula',
       duration: '95 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/4h0D4uAa0qI',
+      videoUrl: 'https://www.youtube.com/embed/4epESGF3qcU',
       completed: false,
       objectives: [
         'ใช้ Cauchy integral formula',
@@ -212,7 +212,7 @@ const complexAnalysis = (): CourseData => ({
       title: 'Series Representations',
       duration: '105 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/1e4A1pQw7jQ',
+      videoUrl: 'https://www.youtube.com/embed/F3yuI40wNdc',
       completed: false,
       objectives: [
         'หา Taylor และ Laurent series',
@@ -264,7 +264,7 @@ const complexAnalysis = (): CourseData => ({
       title: 'Residue Theory และ Applications',
       duration: '120 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/1e4A1pQw7jQ',
+      videoUrl: 'https://www.youtube.com/embed/t0Pp3460hoE',
       completed: false,
       objectives: [
         'คำนวณ residues',

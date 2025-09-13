@@ -24,7 +24,7 @@ const differentialEquations = (): CourseData => ({
       title: 'First-Order Differential Equations',
       duration: '95 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/Oe8x6ucS3uU',
+      videoUrl: 'https://www.youtube.com/embed/tVzaX9u6YAE',
       completed: false,
       objectives: [
         'แก้สมการ separable และ linear first-order',
@@ -66,7 +66,7 @@ const differentialEquations = (): CourseData => ({
       title: 'Second-Order Linear Equations',
       duration: '105 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/24L6yvJX8b0',
+      videoUrl: 'https://www.youtube.com/embed/vP-oRQqmeg4',
       completed: false,
       objectives: [
         'แก้สมการ homogeneous กับ constant coefficients',
@@ -108,7 +108,7 @@ const differentialEquations = (): CourseData => ({
       title: 'Laplace Transforms',
       duration: '100 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/V5tebLR4txA',
+      videoUrl: 'https://www.youtube.com/embed/sZ2qulI6GEk',
       completed: false,
       objectives: [
         'คำนวณ Laplace transforms ของฟังก์ชันพื้นฐาน',
@@ -150,7 +150,7 @@ const differentialEquations = (): CourseData => ({
       title: 'Systems of Differential Equations',
       duration: '110 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/864j48xtSi0',
+      videoUrl: 'https://www.youtube.com/embed/heBvViSi9xQ',
       completed: false,
       objectives: [
         'แก้ระบบ linear systems ด้วย eigenvalue method',
@@ -197,7 +197,7 @@ const differentialEquations = (): CourseData => ({
       title: 'Series Solutions',
       duration: '90 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/5i2E5bBb1rM',
+      videoUrl: 'https://www.youtube.com/embed/saPepQrIjqM',
       completed: false,
       objectives: [
         'หาผลเฉลยแบบอนุกรมรอบ ordinary points',
@@ -249,7 +249,7 @@ const differentialEquations = (): CourseData => ({
       title: 'Partial Differential Equations',
       duration: '120 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/5i2E5bBb1rM',
+      videoUrl: 'https://www.youtube.com/embed/M19mzHT8JM4',
       completed: false,
       objectives: [
         'จำแนกประเภท PDEs',
