@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Play, ChevronRight, Menu, X, Calculator, PenTool, BarChart3 } from 'lucide-react';
 import CoursePage from '../components/CoursePage';
 import AboutPage from '../components/AboutPage';
+import ContactPage from '../components/ContactPage';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -103,6 +104,17 @@ export default function Home() {
     { number: '95%', label: 'ความพึงพอใจ' }
   ];
 
+  // Add contact page condition
+if (currentView === 'contact' && !selectedCourse) {
+  return (
+    <ContactPage 
+      onBack={handleBackToHome}
+    />
+  );
+}
+
+// Your existing about and course view code...
+
   if (currentView === 'course' && selectedCourse) {
     return (
       <CoursePage 
@@ -158,7 +170,12 @@ if (currentView === 'course' && selectedCourse) {
               >
                 เกี่ยวกับเรา
               </button>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 font-medium">ติดต่อ</a>
+              <button 
+                onClick={() => setCurrentView('contact')}
+                className="text-gray-700 hover:text-blue-600 font-medium"
+              >
+                ติดต่อ
+              </button>
             </nav>
 
             {/* Mobile menu button */}
@@ -182,7 +199,12 @@ if (currentView === 'course' && selectedCourse) {
             >
               เกี่ยวกับเรา
             </button>
-            <a href="#contact" className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ติดต่อ</a>
+            <button 
+              onClick={() => setCurrentView('contact')}
+              className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+            >
+              ติดต่อ
+            </button>
             <hr className="my-2" />
             <button className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">เข้าสู่ระบบ</button>
             <button className="block w-full bg-blue-600 text-white px-3 py-2 rounded-md hover:bg-blue-700">สมัครเรียน</button>
@@ -203,11 +225,17 @@ if (currentView === 'course' && selectedCourse) {
             ด้วยวิดีโอบทเรียน แบบฝึกหัด และเครื่องมือช่วยเรียนรู้ที่ทันสมัย
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-blue-700 transition-all transform hover:scale-105">
+            <a 
+              href="#courses" 
+              className="inline-block bg-blue-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-blue-700 transition-all transform hover:scale-105"
+            >
               เริ่มเรียนฟรี
-            </button>
-            <button className="border border-gray-300 text-gray-700 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-50 transition-colors">
-              ดูตัวอย่างบทเรียน
+            </a>
+            <button 
+              onClick={() => setCurrentView('about')}
+              className="border border-gray-300 text-gray-700 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-50 transition-colors"
+            >
+              เรียนรู้เพิ่มเติมเกี่ยวกับเรา
             </button>
           </div>
         </div>
