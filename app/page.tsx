@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Play, ChevronRight, Menu, X, Calculator, PenTool, BarChart3 } from 'lucide-react';
 import CoursePage from '../components/CoursePage';
+import AboutPage from '../components/AboutPage';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -113,6 +114,27 @@ export default function Home() {
     );
   }
 
+  // Add this after the course view check
+if (currentView === 'about' && !selectedCourse) {
+  return (
+    <AboutPage 
+      onBack={handleBackToHome}
+    />
+  );
+}
+
+// Your existing course view code
+if (currentView === 'course' && selectedCourse) {
+  return (
+    <CoursePage 
+      courseKey={selectedCourse.courseKey}
+      courseName={selectedCourse.courseName}
+      gradeLevel={selectedCourse.gradeLevel}
+      onBack={handleBackToHome}
+    />
+  );
+}
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Header */}
@@ -130,16 +152,14 @@ export default function Home() {
             <nav className="hidden md:flex space-x-8">
               <a href="#" className="text-gray-700 hover:text-blue-600 font-medium">หน้าหลัก</a>
               <a href="#courses" className="text-gray-700 hover:text-blue-600 font-medium">คอร์สเรียน</a>
-              <a href="#about" className="text-gray-700 hover:text-blue-600 font-medium">เกี่ยวกับเรา</a>
+              <button 
+                onClick={() => setCurrentView('about')}
+                className="text-gray-700 hover:text-blue-600 font-medium"
+              >
+                เกี่ยวกับเรา
+              </button>
               <a href="#contact" className="text-gray-700 hover:text-blue-600 font-medium">ติดต่อ</a>
             </nav>
-
-            <div className="hidden md:flex items-center space-x-4">
-              <button className="text-gray-700 hover:text-blue-600 font-medium">เข้าสู่ระบบ</button>
-              <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                สมัครเรียน
-              </button>
-            </div>
 
             {/* Mobile menu button */}
             <button 
@@ -153,16 +173,19 @@ export default function Home() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200">
-            <div className="px-4 pt-2 pb-3 space-y-1">
-              <a href="#" className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">หน้าหลัก</a>
-              <a href="#courses" className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">คอร์สเรียน</a>
-              <a href="#about" className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">เกี่ยวกับเรา</a>
-              <a href="#contact" className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ติดต่อ</a>
-              <hr className="my-2" />
-              <button className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">เข้าสู่ระบบ</button>
-              <button className="block w-full bg-blue-600 text-white px-3 py-2 rounded-md hover:bg-blue-700">สมัครเรียน</button>
-            </div>
+          <div className="px-4 pt-2 pb-3 space-y-1">
+            <a href="#" className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">หน้าหลัก</a>
+            <a href="#courses" className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">คอร์สเรียน</a>
+            <button 
+              onClick={() => setCurrentView('about')}
+              className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+            >
+              เกี่ยวกับเรา
+            </button>
+            <a href="#contact" className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">ติดต่อ</a>
+            <hr className="my-2" />
+            <button className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">เข้าสู่ระบบ</button>
+            <button className="block w-full bg-blue-600 text-white px-3 py-2 rounded-md hover:bg-blue-700">สมัครเรียน</button>
           </div>
         )}
       </header>
