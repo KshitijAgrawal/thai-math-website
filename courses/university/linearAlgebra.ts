@@ -24,7 +24,7 @@ const linearAlgebra = (): CourseData => ({
       title: 'Vector Spaces และ Subspaces',
       duration: '90 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/9m0I9fFf5wA',
+      videoUrl: 'https://www.youtube.com/embed/3SkCNpFOshk',
       completed: false,
       objectives: [
         'เข้าใจคำจำกัดความของ vector space',
@@ -66,7 +66,7 @@ const linearAlgebra = (): CourseData => ({
       title: 'Linear Independence และ Basis',
       duration: '85 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/0n2J0gGg6xE',
+      videoUrl: 'https://www.youtube.com/embed/k095NdrHxY4',
       completed: false,
       objectives: [
         'ตรวจสอบความเป็นอิสระเชิงเส้น',
@@ -113,7 +113,7 @@ const linearAlgebra = (): CourseData => ({
       title: 'Linear Transformations',
       duration: '95 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/1p4K1hHh7yI',
+      videoUrl: 'https://www.youtube.com/embed/-X04WJoTDBc',
       completed: false,
       objectives: [
         'เข้าใจคำจำกัดความของ linear transformation',
@@ -160,7 +160,7 @@ const linearAlgebra = (): CourseData => ({
       title: 'Eigenvalues และ Eigenvectors',
       duration: '100 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/2q6L2iIi8kM',
+      videoUrl: 'https://www.youtube.com/embed/ighcncy6qQ8',
       completed: false,
       objectives: [
         'หา eigenvalues และ eigenvectors',
@@ -207,7 +207,7 @@ const linearAlgebra = (): CourseData => ({
       title: 'Inner Product Spaces',
       duration: '80 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/9m0I9fFf5wA',
+      videoUrl: 'https://www.youtube.com/embed/TRktLuAktBQ',
       completed: false,
       objectives: [
         'เข้าใจคำจำกัดความของ inner product',
@@ -254,7 +254,7 @@ const linearAlgebra = (): CourseData => ({
       title: 'Applications และ Special Matrices',
       duration: '90 นาที',
       hasVideo: true,
-      videoUrl: 'https://www.youtube.com/embed/9m0I9fFf5wA',
+      videoUrl: 'https://www.youtube.com/embed/cOUTpqlX-Xs',
       completed: false,
       objectives: [
         'ประยุกต์ใช้ในปัญหา least squares',
